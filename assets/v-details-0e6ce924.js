@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,a as o,g as _}from"./app-43701ee7.js";const l={props:["title"]},r={class:"v-details"},c=["innerHTML"];function i(e,d,t,u,p,f){return a(),n("details",r,[o("summary",{innerHTML:t.title},null,8,c),_(e.$slots,"default")])}const m=s(l,[["render",i],["__file","v-details.vue"]]);export{m as default};

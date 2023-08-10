@@ -7,7 +7,8 @@
         "start": "vuepress dev src",
         "build": "vuepress build src",
         "build-gh-pages": "gh-pages -d src/.vuepress/dist",
-        "deploy": "npm run build && npm run build-gh-pages"
+        "commit": "git add . && git commit -m \"Bash Script Commit\" && git push origin head",
+        "deploy": "npm run build && npm run build-gh-pages && npm run commit"
     },
     "dependencies": {
         "acorn": "^8.9.0",

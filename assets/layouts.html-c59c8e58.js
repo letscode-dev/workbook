@@ -1,0 +1,1 @@
+const e=JSON.parse('{"key":"v-584373fa","path":"/themes/references/links/html/layouts.html","title":"Макеты","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1691672396000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/references/links/html/layouts.md"}');export{e as data};

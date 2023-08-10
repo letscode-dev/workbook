@@ -11,7 +11,7 @@ export default defineUserConfig({
 	base: '/workbook/',
 	title: 'Let\'s Code Workbook',
 	head: [
-		['link', { rel: 'icon', href: '/favicon.svg' }],
+		['link', { rel: 'icon', href: '/workbook/favicon.svg' }],
 		['meta', { name: 'theme-color', content: '#3eaf7c' }],
 		['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
 		['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]

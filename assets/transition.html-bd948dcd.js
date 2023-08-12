@@ -1,0 +1,12 @@
+import{_ as t,o as e,c as x,f as s,a as n,b as a,e as o}from"./app-3e4ab473.js";const c={},i=n("h1",{id:"переходы-в-css-transition",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#переходы-в-css-transition","aria-hidden":"true"},"#"),a(" Переходы в CSS (transition)")],-1),p=n("h3",{id:"transition-анимированныи-переход",tabindex:"-1"},[n("a",{class:"header-anchor",href:"#transition-анимированныи-переход","aria-hidden":"true"},"#"),a(" transition (анимированный переход)")],-1),l=o(`<div class="language-css" data-ext="css"><pre class="language-css"><code><span class="token property">transition</span><span class="token punctuation">:</span> all 0s ease 0s<span class="token punctuation">;</span>
+</code></pre></div><ul><li><code>transition-property</code> - какие свойства анимируются</li><li><code>transition-duration</code> - длина анимации</li><li><code>transition-timing-function</code>- как вычисляются промежуточные состояния</li><li><code>transition-delay</code>- время ожидания перед запуском эффекта</li></ul><div class="language-css" data-ext="css"><pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+	<span class="token property">transition</span><span class="token punctuation">:</span> all 0.7s ease-in 0s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-css" data-ext="css"><pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+	<span class="token property">transition</span><span class="token punctuation">:</span> all 0.7s ease-in 0s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">div:hover</span> <span class="token punctuation">{</span>
+	<span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div>`,4);function r(u,d){return e(),x("div",null,[i,s(" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx "),p,s(" xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx "),l])}const _=t(c,[["render",r],["__file","transition.html.vue"]]);export{_ as default};

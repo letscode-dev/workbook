@@ -63,6 +63,7 @@ export const THEME_REFERENCES_LINKS = [
             [p+'common/games',    'Игры'],
             [p+'common/training', 'Тренировки и план развития'],
             [p+'common/schools',  'Школы программирования'],
+            [p+'common/svg-logo', 'Создание SVG логотипа'],
         ]
     },
     {

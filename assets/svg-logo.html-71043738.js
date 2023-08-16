@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-38e1679c","path":"/themes/references/links/common/svg-logo.html","title":"Создание SVG логотипа","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":null,"contributors":[]},"filePathRelative":"themes/references/links/common/svg-logo.md"}');export{e as data};

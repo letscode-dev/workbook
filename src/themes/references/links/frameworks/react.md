@@ -9,7 +9,7 @@
 - [https://react-select.com/home](https://react-select.com/home) React Select
 - [https://github.com/elgerlambert/redux-localstorage](https://github.com/elgerlambert/redux-localstorage) redux-localstorage
 
-### UI Design System
+### UI Libraries
 - [https://mui.com/](https://mui.com/) Material UI
 - [https://ant.design/](https://ant.design/) Ant Design
 - [https://reactstrap.github.io/](https://reactstrap.github.io/) React Strap (Bootstrap for React)

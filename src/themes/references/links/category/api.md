@@ -18,4 +18,5 @@
 - [https://punkapi.com/documentation/v2](https://punkapi.com/documentation/v2) Punk API (Beers API)
 - [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/) The Movie Database API
 - [https://randomuser.me/](https://randomuser.me/) Random User Generator
+- [https://dog.ceo/dog-api/](https://dog.ceo/dog-api/) Dog API
 - [https://github.com/HackerNews/API](https://github.com/HackerNews/API) Hacker News API

@@ -1,2 +1,0 @@
-import{_ as r,o as t,c}from"./app-9e24aef3.js";const s={props:["height","src"]},a=["src","height"];function o(_,n,e,l,d,i){return t(),c("iframe",{class:"frame",src:e.src,height:e.height,style:{width:"100%"},scrolling:"no",frameborder:"no",allowtransparency:"true",allowfullscreen:"true"},`\r
-	`,8,a)}const h=r(s,[["render",o],["__scopeId","data-v-d6c309d2"],["__file","v-iframe.vue"]]);export{h as default};

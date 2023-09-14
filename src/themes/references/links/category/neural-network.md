@@ -16,7 +16,8 @@
 - [https://images.ai/](https://images.ai/)  Images.ai
 - [https://dream.ai/create](https://dream.ai/create) Dream AI
 - [https://hotpot.ai/art-generator](https://hotpot.ai/art-generator) Hotpot
-- [https://stablediffusionweb.com/](https://stablediffusionweb.com/) Stablediffusionweb 
+- [https://stablediffusionweb.com/](https://stablediffusionweb.com/) Stablediffusionweb
+- [https://ideogram.ai/](https://ideogram.ai/) Ideogram (может писать текст)
 
 ### Логотипы
 - [https://looka.com/](https://looka.com/) Looka

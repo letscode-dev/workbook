@@ -1,4 +1,0 @@
-import{_ as t,o as s,c as e,e as a}from"./app-c2f9ed6e.js";const n={},o=a(`<h1 id="css-селекторы-attr" tabindex="-1"><a class="header-anchor" href="#css-селекторы-attr" aria-hidden="true">#</a> CSS селекторы (attr)</h1><div class="language-css" data-ext="css"><pre class="language-css"><code>input[type=<span class="token string">&quot;text&quot;</span>]  <span class="token comment">/* Все input у которых type=&quot;text&quot; */</span>
-input[name=<span class="token string">&quot;text&quot;</span>]  <span class="token comment">/* Все input у которых name=&quot;text&quot; */</span>
-input[class=<span class="token string">&quot;text&quot;</span>] <span class="token comment">/* Все input у которых class=&quot;text&quot; */</span>
-</code></pre></div>`,2),c=[o];function r(p,u){return s(),e("div",null,c)}const i=t(n,[["render",r],["__file","selector-attr.html.vue"]]);export{i as default};

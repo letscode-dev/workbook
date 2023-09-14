@@ -1,0 +1,11 @@
+import{_ as s,o as n,c as a,e as t}from"./app-10f0ee09.js";const p="/workbook/assets/display-10e08a9f.png",e={},o=t(`<h1 id="display" tabindex="-1"><a class="header-anchor" href="#display" aria-hidden="true">#</a> display</h1><details class="custom-container details"><summary>Темы</summary><ul><li>CSS Display (block, inline, table, none)</li></ul></details><div class="language-css" data-ext="css"><pre class="language-css"><code><span class="token selector">div</span> <span class="token punctuation">{</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>        <span class="token comment">/* Блок */</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> inline<span class="token punctuation">;</span>       <span class="token comment">/* Строка */</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> inline-block<span class="token punctuation">;</span> <span class="token comment">/* Блок-строка */</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> table<span class="token punctuation">;</span>        <span class="token comment">/* Блочная таблица */</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> table-cell<span class="token punctuation">;</span>   <span class="token comment">/* Ячейка таблицы */</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>         <span class="token comment">/* Нет */</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>         <span class="token comment">/* Flexbox элемент */</span>
+	<span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>         <span class="token comment">/* Grid элемент */</span>
+<span class="token punctuation">}</span>
+</code></pre></div><img src="`+p+'" style="width:450px;">',4),c=[o];function l(i,u){return n(),a("div",null,c)}const k=s(e,[["render",l],["__file","display.html.vue"]]);export{k as default};

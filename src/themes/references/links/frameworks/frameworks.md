@@ -2,7 +2,7 @@
 
 ### Общее
 - [https://jamstack.org/](https://jamstack.org/) JAM Stack
-- [https://tanstack.com/](https://tanstack.com/) Tan Stack
+- [https://tanstack.com/](https://tanstack.com/) Tan Stack (набор инструментов)
 - [https://cxjs.io/](https://cxjs.io/) CRUD Applications and Dashboards
 - [https://svelte.dev/](https://svelte.dev/) Svelte
 - [https://www.gatsbyjs.com/](https://www.gatsbyjs.com/) Gatsby

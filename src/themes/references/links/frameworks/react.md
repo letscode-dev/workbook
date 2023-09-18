@@ -9,28 +9,42 @@
 - [https://react-select.com/home](https://react-select.com/home) React Select
 - [https://github.com/elgerlambert/redux-localstorage](https://github.com/elgerlambert/redux-localstorage) redux-localstorage
 
-### UI Libraries
+### UI
+
+**Libraries**
 - [https://mui.com/](https://mui.com/) Material UI
 - [https://ant.design/](https://ant.design/) Ant Design
 - [https://reactstrap.github.io/](https://reactstrap.github.io/) React Strap (Bootstrap for React)
+- [https://mantine.dev/](https://mantine.dev/) Mantine UI
+- [https://chakra-ui.com/](https://chakra-ui.com/) Chakra UI
 
-### UI
+**Animations**
+- [https://www.react-spring.dev/](https://www.react-spring.dev/) React Spring
 - [https://github.com/framer/motion](https://github.com/framer/motion) Framer Motion (библиотека с анимациями для React)
 - [https://github.com/chenglou/react-motion](https://github.com/chenglou/react-motion) React Motion (анимации)
+
+**Charts**
+- [https://recharts.org/](https://recharts.org/) Recharts (графики)
+- [https://charts.carbondesignsystem.com/](https://charts.carbondesignsystem.com/) Carbon Design System (Charts)
+- [https://formidable.com/open-source/victory/docs/victory-chart/](https://formidable.com/open-source/victory/docs/victory-chart/) VictoryChart
+- [https://react-chartjs-2.js.org/](https://react-chartjs-2.js.org/) react-chartjs-2
+
+**Tables**
+- [https://www.ag-grid.com/react-data-grid/](https://www.ag-grid.com/react-data-grid/) AG Grid React Tables
+- [https://tanstack.com/table](https://tanstack.com/table) TanStack Table
+
+**Other**
 - [https://react-slick.neostack.com/](https://react-slick.neostack.com/) React Slick (слайдер)
 - [https://carbondesignsystem.com/](https://carbondesignsystem.com/) Carbon Design System
-- [https://charts.carbondesignsystem.com/](https://charts.carbondesignsystem.com/) Carbon Design System (Charts)
-- [https://recharts.org/](https://recharts.org/) Recharts (графики)
-- [https://www.react-spring.dev/](https://www.react-spring.dev/) Animations
-- [https://www.ag-grid.com/](https://www.ag-grid.com/) Tables
-- [https://www.ag-grid.com/react-data-grid/](https://www.ag-grid.com/react-data-grid/) AG Grid React Tables
 
 ### SSR
 - [https://nextjs.org/](https://nextjs.org/) Next.js (SSR для React)
 - [https://remix.run/](https://remix.run/) Remix. React-фреймворк для SSR
+- [https://nextra.site/](https://nextra.site/) Nextra. Site generation framework with Next.js & MDX
 
 ### Обработка форм
 - [https://react-hook-form.com/](https://react-hook-form.com/) React Hook Form
+- [https://formik.org/](https://formik.org/) Formik
 
 ### Styleguide
 - [https://storybook.js.org/](https://storybook.js.org/docs/react/get-started/introduction) Storybook for React

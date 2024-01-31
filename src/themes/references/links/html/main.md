@@ -2,6 +2,7 @@
 
 ### Общее
 - [https://caniuse.com](https://caniuse.com/) Проверка поддержки CSS-свойств браузерами
+- [https://www.caniemail.com/](https://www.caniemail.com/) Проверка поддержки CSS-свойств для E-mail
 - [https://autoprefixer.github.io](https://autoprefixer.github.io/ru/) Автопрефиксер
 - [https://www.responsinator.com](https://www.responsinator.com/) Эмулятор мобильного устройства
 - [http://shpargalkablog.ru/2010/12/napisat-kod-tekstom.html](http://shpargalkablog.ru/2010/12/napisat-kod-tekstom.html) Экранирование HTML-тегов

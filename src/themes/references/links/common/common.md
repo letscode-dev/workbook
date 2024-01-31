@@ -7,6 +7,8 @@
 - [https://github.com/paulirish/lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed) Lite YouTube Embed
 - [https://bitly.com/](https://bitly.com/) Генарация коротких ссылок
 - [https://katex.org/](https://katex.org/) Создание математических формул
+- [https://git-lfs.com/](https://git-lfs.com/) Git LFS. Скачивание больших файлов
+- [https://www.browserstack.com/](https://www.browserstack.com/) Browserstack. Облачная платформа тестирования
 
 ### Терминалы
 - [https://hyper.is/](https://hyper.is/) Hyper.js

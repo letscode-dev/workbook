@@ -11,6 +11,7 @@
 
 ### UI
 - [https://uiverse.io/](https://uiverse.io/) Open-Source UI elements for any project
+- [https://splidejs.com/](https://splidejs.com/) Splidejs. Слайдер
 
 ### Генераторы
 - [https://single-spa.js.org/docs/create-single-spa/](https://single-spa.js.org/docs/create-single-spa/) create-single-spa

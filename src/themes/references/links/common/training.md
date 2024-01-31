@@ -5,9 +5,10 @@
 - [https://www.fullstack.cafe/interview-questions/javascript](https://www.fullstack.cafe/interview-questions/javascript) Interview Questions
 - [https://learn.grasshopper.app/](https://learn.grasshopper.app/) Learn Grasshopper
 
-### Алгоритмические задачм
+### Алгоритмические задачи
 - [https://leetcode.com/](https://leetcode.com/) LeetCode
 - [https://www.codewars.com/](https://www.codewars.com/) CodeWars
+- [https://www.hackerrank.com/](https://www.hackerrank.com/) Hacker Rank
 
 ### Тестовые задания
 - [https://github.com/Hexlet/ru-test-assignments](https://github.com/Hexlet/ru-test-assignments) Список тестовых заданий

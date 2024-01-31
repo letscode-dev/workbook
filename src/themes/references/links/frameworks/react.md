@@ -41,6 +41,7 @@
 - [https://nextjs.org/](https://nextjs.org/) Next.js (SSR для React)
 - [https://remix.run/](https://remix.run/) Remix. React-фреймворк для SSR
 - [https://nextra.site/](https://nextra.site/) Nextra. Site generation framework with Next.js & MDX
+- [https://bun.sh/](https://bun.sh/) Bun. Server-side rendering React
 
 ### Обработка форм
 - [https://react-hook-form.com/](https://react-hook-form.com/) React Hook Form

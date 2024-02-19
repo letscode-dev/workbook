@@ -64,3 +64,6 @@
 - [https://effector.dev/ru/](https://effector.dev/ru/) Effector
 - [https://github.com/ai/nanostores](https://github.com/ai/nanostores/) Nano Stores
 - [https://reatom.js.org/](https://reatom.js.org/) Reatom
+
+### Прочее
+- [https://swr.vercel.app/ru](https://swr.vercel.app/ru) React хуки для выборки данных (кеширование запросов)

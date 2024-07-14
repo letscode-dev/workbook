@@ -4,12 +4,12 @@
   "type": "module",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "docs:build": "vuepress build docs",
     "clean-dev": "vuepress dev docs --clean-cache",
     "update-package": "npx vp-update",
     "build-gh-pages": "gh-pages -d docs/.vuepress/dist",
     "commit": "git add . && git commit -m \"Bash Script Commit\" && git push origin head",
-    "deploy": "npm run build && npm run build-gh-pages && npm run commit"
+    "deploy": "npm run docs:build && npm run build-gh-pages && npm run commit"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "^2.0.0-rc.7",

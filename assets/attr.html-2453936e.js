@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-33105e58","path":"/themes/learn/js/basic/attr.html","title":"Атрибуты","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1691672396000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/learn/js/basic/attr.md"}');export{e as data};

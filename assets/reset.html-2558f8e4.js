@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-63c81c8a","path":"/themes/learn/git/themes/reset.html","title":"Отмена изменений файлов","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1691672396000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/learn/git/themes/reset.md"}');export{e as data};

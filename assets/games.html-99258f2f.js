@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-96c700ea","path":"/themes/references/links/common/games.html","title":"Игры","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1691672396000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/references/links/common/games.md"}');export{e as data};

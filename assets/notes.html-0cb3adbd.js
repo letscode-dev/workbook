@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-218f6b25","path":"/themes/learn/git/info/notes.html","title":"Примечания","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1691672396000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/learn/git/info/notes.md"}');export{e as data};

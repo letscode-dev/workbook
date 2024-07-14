@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-4d253cc8","path":"/themes/references/links/category/3d.html","title":"3D Graphics","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1691672396000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/references/links/category/3d.md"}');export{e as data};

@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-190975e3","path":"/themes/learn/html/tools/vk.html","title":"Виджеты ВКонтакте","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1691672396000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/learn/html/tools/vk.md"}');export{e as data};

@@ -1,1 +1,0 @@
-const e=JSON.parse('{"key":"v-271100d6","path":"/themes/learn/html/properties/calc.html","title":"calc()","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1691672396000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/learn/html/properties/calc.md"}');export{e as data};

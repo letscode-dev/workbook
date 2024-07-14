@@ -1,7 +1,0 @@
-import{_ as s,o as a,c as e,a as n}from"./app-DM3tM0M2.js";const t={},c=n(`<h1 id="css-селекторы-class-id-tag" tabindex="-1"><a class="header-anchor" href="#css-селекторы-class-id-tag"><span>CSS селекторы (class, id, tag)</span></a></h1><div class="language-css" data-highlighter="prismjs" data-ext="css" data-title="css"><pre class="language-css"><code><span class="line">div        <span class="token comment">/* По названию тега */</span></span>
-<span class="line">.class     <span class="token comment">/* По названию класса */</span></span>
-<span class="line">#id        <span class="token comment">/* По названию id */</span></span>
-<span class="line">div p      <span class="token comment">/* Каскад */</span></span>
-<span class="line">header<span class="token punctuation">,</span> p  <span class="token comment">/* Применение стилей к нескольким элементам */</span></span>
-<span class="line">*          <span class="token comment">/* Все элементы */</span></span>
-<span class="line"></span></code></pre></div>`,2),l=[c];function o(i,p){return a(),e("div",null,l)}const m=s(t,[["render",o],["__file","selector-basic.html.vue"]]),d=JSON.parse('{"path":"/themes/learn/html/selectors/selector-basic.html","title":"CSS селекторы (class, id, tag)","lang":"en-US","frontmatter":{},"headers":[],"git":{"updatedTime":1720968190000,"contributors":[{"name":"Anton","email":"45148047+anton-sergeenkov@users.noreply.github.com","commits":1}]},"filePathRelative":"themes/learn/html/selectors/selector-basic.md"}');export{m as comp,d as data};

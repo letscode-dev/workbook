@@ -1,23 +1,25 @@
-### Code
+## ⭐️ TODO
 
-- Добавить поиск. https://v2.vuepress.vuejs.org/reference/plugin/docsearch.html#get-search-index
+**Поиск**
+- Добавить поиск
+- https://ecosystem.vuejs.press/plugins/search/docsearch.html
+
+**TODO**
 - Добавить отдельную страницу `ui-kit` для кастомных ui-компонентов
+- Заменить личные ссылки https://codepen.io/, на ссылки для школы
 
 ---
 
+## ⭐️ Not Required
+
+**Деплой**
 - Деплой с GitHub Actions https://vuejs.press/guide/deployment.html#github-pages
 
-### Common
-
-- Заменить личные ссылки https://codepen.io/, на ссылки для школы
-
-### Информация снизу
-
-Пока скрыто стилями
-
-- Last Updated
-- Contributors
-- Prev Page, Next Page
+**Информация снизу**
+- Показываются данные: Last Updated, Contributors, Prev Page, Next Page
+- https://v1.vuepress.vuejs.org/theme/default-theme-config.html#prev-next-links
+- Убрать через настройки
+- Пока скрыто стилями
 
 > docs\.vuepress\styles\index.scss
 

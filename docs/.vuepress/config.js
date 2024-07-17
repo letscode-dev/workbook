@@ -7,9 +7,8 @@ import { getDirname, path } from "@vuepress/utils";
 
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { shikiPlugin } from "@vuepress/plugin-shiki";
-
+import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 // import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
-// import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
 const __dirname = getDirname(import.meta.url);
 
@@ -42,6 +41,9 @@ export default defineUserConfig({
         ["v-padding"]: path.resolve(__dirname, "./components/v-padding.vue"),
         ["v-two"]: path.resolve(__dirname, "./components/v-two.vue"),
       },
+    }),
+    docsearchPlugin({
+      // options
     }),
     shikiPlugin({
       langs: [

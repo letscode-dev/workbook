@@ -44,9 +44,13 @@
 	--color-violet-soft:       140, 106, 210;  /* #8c6ad2 */
 	--color-violet-gray-light: 254, 246, 255;  /* #fef6ff */
 	--color-violet-blue:       59, 73, 235;    /* #3b49eb */
+}
 
-	// code blocks vars
-	// --code-bg-color: #dedcdc;
+/***************************************************
+GENERAL
+/***************************************************/
+.theme-default-content {
+	max-width: 1000px !important;
 }
 
 img:not(.vp-site-logo) {
@@ -61,13 +65,6 @@ img:not(.vp-site-logo) {
 		0 8px 10px -5px rgba(33,37,41,.1);
 }
 
-
-/***************************************************
-GENERAL
-/***************************************************/
-.theme-default-content {
-	max-width: 1000px !important;
-}
 
 /***************************************************
 SCROLL
@@ -150,4 +147,30 @@ table.no-even tr {
 }
 #main-title {
 	font-size: 30px;
+}
+
+/***************************************************
+CODE
+/***************************************************/
+div[class*=language-] pre, div[class*=language-] pre[class*=language-] {
+	background: none !important;
+	background-color: #FAFAFA !important;
+    color: #383A42 !important;
+}
+
+.theme-default-content pre, .theme-default-content pre[class*=language-] {
+	border-radius: 5px;
+	border: 1px solid #e7e7e7;
+}
+pre * {
+	font-style: normal !important;
+}
+
+.vp-copy-code-button:hover {
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
+}
+.vp-copy-code-button.copied::after {
+	background-color: #fff;
+	border: 1px solid #e7e7e7;
 }

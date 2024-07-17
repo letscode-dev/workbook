@@ -6,6 +6,8 @@ import { NAV, SIDEBAR } from "./builder";
 import { getDirname, path } from "@vuepress/utils";
 
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
+import { shikiPlugin } from "@vuepress/plugin-shiki";
+
 // import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
 // import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 
@@ -33,7 +35,6 @@ export default defineUserConfig({
     logo: "./logo.png",
   }),
   plugins: [
-    "@vuepress/plugin-medium-zoom",
     registerComponentsPlugin({
       components: {
         ["v-details"]: path.resolve(__dirname, "./components/v-details.vue"),
@@ -42,12 +43,21 @@ export default defineUserConfig({
         ["v-two"]: path.resolve(__dirname, "./components/v-two.vue"),
       },
     }),
-    // mediumZoomPlugin({
-    //   // options
-    // }),
-    // docsearchPlugin({
-    //   // options
-    // }),
+    shikiPlugin({
+      langs: [
+        "js",
+        "ts",
+        "html",
+        "css",
+        "jsx",
+        "tsx",
+        "json",
+        "vue",
+        "md",
+        "bash",
+      ],
+      theme: "one-light",
+    }),
   ],
   bundler: viteBundler(),
 });

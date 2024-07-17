@@ -16,6 +16,7 @@
     "@vuepress/plugin-docsearch": "^2.0.0-rc.38",
     "@vuepress/plugin-medium-zoom": "^2.0.0-rc.38",
     "@vuepress/plugin-register-components": "^2.0.0-rc.37",
+    "@vuepress/plugin-shiki": "^2.0.0-rc.38",
     "@vuepress/theme-default": "^2.0.0-rc.38",
     "gh-pages": "^6.1.1",
     "vue": "^3.4.0",

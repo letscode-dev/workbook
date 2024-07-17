@@ -30,15 +30,24 @@ export const NAV = [
     ],
   },
   {
-    text: "References",
+    text: "Roadmaps",
     children: [
-      getNav("Ссылки", PATH_REFERENCES_LINKS + "/"),
-      getNav("Книги", PATH_REFERENCES_BOOKS + "/"),
+      {
+        text: "React Frontend Developer",
+        link: "/posts/roadmaps/react-frontend-developer",
+      },
     ],
   },
   {
     text: "Usage",
     children: [getNav("IDE", PATH_USAGE_IDE + "/")],
+  },
+  {
+    text: "References",
+    children: [
+      getNav("Ссылки", PATH_REFERENCES_LINKS + "/"),
+      getNav("Книги", PATH_REFERENCES_BOOKS + "/"),
+    ],
   },
 ];
 

@@ -51,6 +51,7 @@ export default defineUserConfig({
         "css",
         "jsx",
         "tsx",
+        "php",
         "json",
         "vue",
         "md",

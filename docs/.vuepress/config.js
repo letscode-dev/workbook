@@ -30,6 +30,7 @@ export default defineUserConfig({
     navbar: NAV,
     sidebar: SIDEBAR,
     sidebarDepth: 0,
+    logo: "./logo.png",
   }),
   plugins: [
     "@vuepress/plugin-medium-zoom",

@@ -49,8 +49,7 @@
 	// --code-bg-color: #dedcdc;
 }
 
-
-img {
+img:not(.vp-site-logo) {
 	display: block;
 	margin: 20px 0;
 	object-fit: contain;

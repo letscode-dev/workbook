@@ -8,7 +8,7 @@
 
 - Деплой с GitHub Actions https://vuejs.press/guide/deployment.html#github-pages
 
-## Content
+## Common
 
 - Добавить Favicon
 - Добавить лого школы

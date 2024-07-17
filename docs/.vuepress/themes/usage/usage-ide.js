@@ -5,13 +5,14 @@ const p = PATH_USAGE_IDE + "/";
 export const THEME_USAGE_IDE = [
   {
     title: "IDE",
-    children: [[p + "common/info", "Информация"]],
+    children: [
+      [p + "common/ide", "IDE"],
+      [p + "common/online-ide", "Online IDE"],
+      [p + "common/online-compilers", "Online Compilers"],
+    ],
   },
-  //   {
-  //     title: "VSCode",
-  //     children: [
-  //       [p + "common/books", "Книги"],
-  //       [p + "common/articles", "Статьи"],
-  //     ],
-  //   },
+  {
+    title: "VSCode",
+    children: [[p + "vscode/plugins", "Плагины"]],
+  },
 ];

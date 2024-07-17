@@ -12,7 +12,7 @@ actions:
   - text: GitHub
     link: https://github.com/letscode-dev
     type: secondary
-  - text: Telegram Channel
+  - text: Telegram
     link: https://t.me/letscode_channel
     type: secondary
 

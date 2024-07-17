@@ -16,6 +16,9 @@ import {
   PATH_REFERENCES_BOOKS,
 } from "./themes/references/references-books";
 
+// USAGE
+import { THEME_USAGE_IDE, PATH_USAGE_IDE } from "./themes/usage/usage-ide";
+
 export const NAV = [
   // getNav('Title', PATH),
 
@@ -35,6 +38,10 @@ export const NAV = [
       getNav("Книги", PATH_REFERENCES_BOOKS + "/"),
     ],
   },
+  {
+    text: "Usage",
+    children: [getNav("IDE", PATH_USAGE_IDE + "/")],
+  },
 ];
 
 export const SIDEBAR = {
@@ -46,4 +53,7 @@ export const SIDEBAR = {
   // REFERENCES
   ...getSidebar(THEME_REFERENCES_LINKS, PATH_REFERENCES_LINKS),
   ...getSidebar(THEME_REFERENCES_BOOKS, PATH_REFERENCES_BOOKS),
+
+  // USAGE
+  ...getSidebar(THEME_USAGE_IDE, PATH_USAGE_IDE),
 };

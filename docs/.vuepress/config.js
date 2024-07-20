@@ -43,7 +43,9 @@ export default defineUserConfig({
       },
     }),
     docsearchPlugin({
-      // options
+      appId: "ZK2XHJMB8J",
+      apiKey: "e6ed4285275fcc1c0ee7e1a6d69bed93",
+      indexName: "letscode-devio",
     }),
     shikiPlugin({
       langs: [

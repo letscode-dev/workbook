@@ -43,8 +43,12 @@ export default defineUserConfig({
       },
     }),
     docsearchPlugin({
-      appId: "ZK2XHJMB8J",
-      apiKey: "e6ed4285275fcc1c0ee7e1a6d69bed93",
+      // E-mail
+      // appId: "ZK2XHJMB8J",
+      // apiKey: "e6ed4285275fcc1c0ee7e1a6d69bed93",
+      // Dashboard Algolia
+      appId: "AV6EC3XYAM",
+      apiKey: "d34be2ca9cc0f470d67b523acb7f76f3",
       indexName: "letscode-devio",
     }),
     shikiPlugin({

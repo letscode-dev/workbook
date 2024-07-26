@@ -1,7 +1,7 @@
 ## ⭐️ TODO
 
 **Поиск**
-- Добавить поиск
+- Заменить базовый поиск на Algolia
 - https://ecosystem.vuejs.press/plugins/search/docsearch.html
 
 **TODO**

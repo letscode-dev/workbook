@@ -7,7 +7,8 @@ import { getDirname, path } from "@vuepress/utils";
 
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { shikiPlugin } from "@vuepress/plugin-shiki";
-import { docsearchPlugin } from "@vuepress/plugin-docsearch";
+import { searchPlugin } from "@vuepress/plugin-search";
+// import { docsearchPlugin } from "@vuepress/plugin-docsearch";
 // import { mediumZoomPlugin } from "@vuepress/plugin-medium-zoom";
 
 const __dirname = getDirname(import.meta.url);
@@ -42,14 +43,17 @@ export default defineUserConfig({
         ["v-two"]: path.resolve(__dirname, "./components/v-two.vue"),
       },
     }),
-    docsearchPlugin({
-      // E-mail
-      // appId: "ZK2XHJMB8J",
-      // apiKey: "e6ed4285275fcc1c0ee7e1a6d69bed93",
-      // Dashboard Algolia
-      appId: "AV6EC3XYAM",
-      apiKey: "d34be2ca9cc0f470d67b523acb7f76f3",
-      indexName: "letscode-devio",
+    // docsearchPlugin({
+    // E-mail
+    // appId: "ZK2XHJMB8J",
+    // apiKey: "e6ed4285275fcc1c0ee7e1a6d69bed93",
+    // Dashboard Algolia
+    // appId: "AV6EC3XYAM",
+    // apiKey: "d34be2ca9cc0f470d67b523acb7f76f3",
+    // indexName: "letscode-devio",
+    // }),
+    searchPlugin({
+      // options
     }),
     shikiPlugin({
       langs: [

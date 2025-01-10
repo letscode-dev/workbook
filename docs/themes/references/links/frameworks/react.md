@@ -19,6 +19,7 @@
 - [https://reactstrap.github.io/](https://reactstrap.github.io/) React Strap (Bootstrap for React)
 - [https://mantine.dev/](https://mantine.dev/) Mantine UI
 - [https://chakra-ui.com/](https://chakra-ui.com/) Chakra UI
+- [https://vercel.com/geist/introduction](https://vercel.com/geist/introduction) Vercel Geist Design System
 
 **Animations**
 

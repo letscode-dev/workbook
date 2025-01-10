@@ -5,6 +5,7 @@
 - [https://code.visualstudio.com/](https://code.visualstudio.com/) Visual Studio Code
 - [https://zed.dev/](https://zed.dev/) Zed (macOS и Linux)
 - [https://theia-ide.org/](https://theia-ide.org/) Theia (интерфейс как у Visual Studio Code)
+- [https://www.cursor.com/](Cursor) The AI Code Editor (Fork VSCode)
 
 ### JetBrains
 

@@ -4,6 +4,7 @@
 
 - [https://vuepress.vuejs.org/](https://vuepress.vuejs.org/) VuePress
 - [https://docusaurus.io/](https://docusaurus.io/) Docusaurus
+- [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/) Material for MkDocs
 
 ### Сервисы
 

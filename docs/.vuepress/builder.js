@@ -17,6 +17,7 @@ import {
 
 // USAGE
 import { THEME_USAGE_IDE, PATH_USAGE_IDE } from "./themes/usage/usage-ide";
+import { THEME_USAGE_LLM, PATH_USAGE_LLM } from "./themes/usage/usage-llm";
 
 export const NAV = [
   // getNav('Title', PATH),
@@ -30,6 +31,13 @@ export const NAV = [
     ],
   },
   {
+    text: "Usage",
+    children: [
+      getNav("IDE", PATH_USAGE_IDE + "/"),
+      getNav("LLM", PATH_USAGE_LLM + "/"),
+    ],
+  },
+  {
     text: "Roadmaps",
     children: [
       {
@@ -37,10 +45,6 @@ export const NAV = [
         link: "/posts/roadmaps/react-frontend-developer",
       },
     ],
-  },
-  {
-    text: "Usage",
-    children: [getNav("IDE", PATH_USAGE_IDE + "/")],
   },
   {
     text: "References",
@@ -62,4 +66,5 @@ export const SIDEBAR = {
 
   // USAGE
   ...getSidebar(THEME_USAGE_IDE, PATH_USAGE_IDE),
+  ...getSidebar(THEME_USAGE_LLM, PATH_USAGE_LLM),
 };

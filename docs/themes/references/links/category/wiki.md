@@ -5,6 +5,8 @@
 - [https://vuepress.vuejs.org/](https://vuepress.vuejs.org/) VuePress
 - [https://docusaurus.io/](https://docusaurus.io/) Docusaurus
 - [https://squidfunk.github.io/mkdocs-material/](https://squidfunk.github.io/mkdocs-material/) Material for MkDocs
+- [https://mintlify.com/](https://mintlify.com/) Mintlify
+- [https://www.docz.site/](https://www.docz.site/) Docz
 
 ### Сервисы
 

@@ -2,10 +2,14 @@
 
 ### Избранное
 
-- [https://www.canva.com/](https://www.canva.com/) Canva. Создание оформления для Linkedin, презентаци и т.д.
-- [https://app.creately.com/](https://app.creately.com/) Creately. Рисование схем
-- [https://www.ilovepdf.com/ru/edit-pdf](https://www.ilovepdf.com/ru/edit-pdf) ILovePDF. Редактирование PDF
-- [https://convertio.co/](https://convertio.co/) Convertio. Конвертер файлов
+- [https://www.canva.com/](https://www.canva.com/) Canva (создание оформлений и дизайна постов)
+- [https://www.ilovepdf.com/ru/edit-pdf](https://www.ilovepdf.com/ru/edit-pdf) ILovePDF (редактирование PDF)
+- [https://convertio.co/](https://convertio.co/) Convertio (конвертер файлов)
+
+### Блок-схемы
+
+- [https://app.creately.com/](https://app.creately.com/) Creately
+- [https://www.drawio.com/](https://www.drawio.com/) Draw.io (есть desktop приложение)
 
 ### Презентации
 

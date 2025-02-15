@@ -19,7 +19,7 @@ export const THEME_REFERENCES_LINKS = [
       [p + "category/api", "Свободное API"],
       [p + "category/builders", "Сборщики"],
       [p + "category/deploy", "Деплой"],
-      [p + "category/neural-network", "Нейросети"],
+      [p + "category/e2e", "E2E тестирование"],
       [p + "category/wiki", "Разработка документации и Wiki"],
     ],
   },

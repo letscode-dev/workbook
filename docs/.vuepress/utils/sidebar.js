@@ -9,7 +9,8 @@ const getSidebarChildren = (children, index, num) => {
 
 export const getSidebar = (arr, path, num) => {
   const result = arr.map(({ title, children }, index) => ({
-    text: `${index + 1}. ${title}`,
+    // text: `${index + 1}. ${title}`,
+    text: title,
     children: getSidebarChildren(children, index, num),
     // collapsable: true,
   }));

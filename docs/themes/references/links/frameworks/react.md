@@ -21,6 +21,10 @@
 - [https://mantine.dev/](https://mantine.dev/) Mantine UI
 - [https://chakra-ui.com/](https://chakra-ui.com/) Chakra UI
 - [https://vercel.com/geist/introduction](https://vercel.com/geist/introduction) Vercel Geist Design System
+- [https://ark-ui.com/](https://ark-ui.com/) Ark UI
+- [https://www.heroui.com/](https://www.heroui.com/) HeroUI
+- [https://www.radix-ui.com/](https://www.radix-ui.com/) Radix UI
+- [https://www.shadcn-form.com/](https://www.shadcn-form.com/) Shadcn Form (Ui-Kit для форм)
 
 **Animations**
 
@@ -34,6 +38,8 @@
 - [https://charts.carbondesignsystem.com/](https://charts.carbondesignsystem.com/) Carbon Design System (Charts)
 - [https://formidable.com/open-source/victory/docs/victory-chart/](https://formidable.com/open-source/victory/docs/victory-chart/) VictoryChart
 - [https://react-chartjs-2.js.org/](https://react-chartjs-2.js.org/) react-chartjs-2
+- [https://www.ag-grid.com/](https://www.ag-grid.com/) AG Grid (графики и таблицы)
+- [https://www.amcharts.com/](https://www.amcharts.com/) AmCharts (графики)
 
 **Tables**
 

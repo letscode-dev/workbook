@@ -18,6 +18,7 @@
 - [Mark Sharp — Markdown Editor](https://marketplace.visualstudio.com/items?itemName=jonathan-yeung.mark-sharp) - редактирование Markdown
 - [Markdown Table Prettifier](https://marketplace.visualstudio.com/items?itemName=darkriszty.markdown-table-prettify) - визуально форматирует таблицы в Markdown
 - [Markdown to Statically-Linked HTML](https://marketplace.visualstudio.com/items?itemName=jakearl.md-to-html) - сохранить Markdown в HTML
+- [Markdown Preview Mermaid Support](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) - просмотр схем в текстовом формате Mermaid
 
 ### Formatters & Highlight
 

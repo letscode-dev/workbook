@@ -13,7 +13,7 @@ export const THEME_USAGE_TECH = [
     title: "Нейросети",
     children: [
       [p + "ai/dev", "Разработка"],
-      [p + "ai/text", "Текст"],
+      [p + "ai/llm", "LLM и платформы"],
       [p + "ai/image", "Изображения"],
       [p + "ai/video", "Видео"],
       [p + "ai/sound", "Звук"],

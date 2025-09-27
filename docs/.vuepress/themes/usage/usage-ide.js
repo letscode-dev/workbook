@@ -7,8 +7,8 @@ export const THEME_USAGE_IDE = [
     title: "IDE",
     children: [
       [p + "common/ide", "IDE"],
-      [p + "common/online-ide", "Online IDE"],
-      [p + "common/online-compilers", "Online Compilers"],
+      [p + "common/online-ide", "Онлайн IDE"],
+      [p + "common/online-compilers", "Онлайн компиляторы"],
     ],
   },
   {

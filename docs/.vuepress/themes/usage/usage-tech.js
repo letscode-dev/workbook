@@ -1,12 +1,24 @@
-export const PATH_REFERENCES_LINKS = "/themes/references/links";
+export const PATH_USAGE_ITECH = "/themes/usage/tech";
 
-const p = PATH_REFERENCES_LINKS + "/";
+const p = PATH_USAGE_ITECH + "/";
 
-export const THEME_REFERENCES_LINKS = [
+export const THEME_USAGE_TECH = [
   {
     title: "Не разработка",
     children: [
       [p + "other/services", "Сервисы общего назначения"],
+    ],
+  },
+  {
+    title: "Нейросети",
+    children: [
+      [p + "ai/dev", "Разработка"],
+      [p + "ai/text", "Текст"],
+      [p + "ai/image", "Изображения"],
+      [p + "ai/video", "Видео"],
+      [p + "ai/sound", "Звук"],
+      [p + "ai/3d", "3D модели"],
+      [p + "ai/common", "Общее"],
     ],
   },
   {

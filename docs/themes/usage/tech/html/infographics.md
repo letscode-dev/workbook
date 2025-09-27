@@ -43,5 +43,4 @@
 - [https://fonts.google.com/icons?selected=Material+Icons:bookmark_border]([https://fonts.google.com/icons?selected=Material+Icons:bookmark_border) Google Fonts (Material Icons)
 - [https://www.fontshare.com/](https://www.fontshare.com/) FontShare (Бесплатные шрифты)
 - [https://usemodify.com/](https://usemodify.com/) Use & Modify (Шрифты с лицензией на бесплатное редактирование)
-
-### Прочее
+- [https://fontsgeek.com/](https://fontsgeek.com/) FontsGeek

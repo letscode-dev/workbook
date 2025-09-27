@@ -7,34 +7,33 @@ import { THEME_LEARN_GIT, PATH_LEARN_GIT } from "./themes/learn/learn-git";
 
 // REFERENCES
 import {
-  THEME_REFERENCES_LINKS,
-  PATH_REFERENCES_LINKS,
-} from "./themes/references/references-links";
-import {
   THEME_REFERENCES_BOOKS,
   PATH_REFERENCES_BOOKS,
 } from "./themes/references/references-books";
 
 // USAGE
+import {
+  THEME_USAGE_TECH,
+  PATH_USAGE_ITECH,
+} from "./themes/usage/usage-tech";
 import { THEME_USAGE_IDE, PATH_USAGE_IDE } from "./themes/usage/usage-ide";
-import { THEME_USAGE_LLM, PATH_USAGE_LLM } from "./themes/usage/usage-llm";
 
 export const NAV = [
   // getNav('Title', PATH),
 
   // TODO: check
   {
-    text: "Learn",
+    text: "Usage",
     children: [
-      getNav("Git", PATH_LEARN_GIT + "/"),
-      getNav("JavaScript", PATH_LEARN_JS + "/"),
+      getNav("Технологии", PATH_USAGE_ITECH + "/"),
+      getNav("IDE", PATH_USAGE_IDE + "/"),
     ],
   },
   {
-    text: "Usage",
+    text: "Обучение",
     children: [
-      getNav("IDE", PATH_USAGE_IDE + "/"),
-      getNav("LLM", PATH_USAGE_LLM + "/"),
+      getNav("Git", PATH_LEARN_GIT + "/"),
+      getNav("JavaScript", PATH_LEARN_JS + "/"),
     ],
   },
   {
@@ -47,9 +46,8 @@ export const NAV = [
     ],
   },
   {
-    text: "References",
+    text: "Ссылки",
     children: [
-      getNav("Ссылки", PATH_REFERENCES_LINKS + "/"),
       getNav("Книги", PATH_REFERENCES_BOOKS + "/"),
     ],
   },
@@ -61,10 +59,10 @@ export const SIDEBAR = {
   ...getSidebar(THEME_LEARN_GIT, PATH_LEARN_GIT),
 
   // REFERENCES
-  ...getSidebar(THEME_REFERENCES_LINKS, PATH_REFERENCES_LINKS),
+
   ...getSidebar(THEME_REFERENCES_BOOKS, PATH_REFERENCES_BOOKS),
 
   // USAGE
+  ...getSidebar(THEME_USAGE_TECH, PATH_USAGE_ITECH),
   ...getSidebar(THEME_USAGE_IDE, PATH_USAGE_IDE),
-  ...getSidebar(THEME_USAGE_LLM, PATH_USAGE_LLM),
 };

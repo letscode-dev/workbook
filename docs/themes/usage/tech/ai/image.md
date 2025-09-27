@@ -2,6 +2,7 @@
 
 ### Генерация изображений
 
+- [https://nanobananaimg.com/](https://nanobananaimg.com/) Nano Banana
 - [https://www.midjourney.com/](https://www.midjourney.com/) Midjourney (Изображения)
 - [https://www.sberbank.com/promo/kandinsky/](https://www.sberbank.com/promo/kandinsky/) Kandinsky (Изображения)
 - [https://t.me/kandinsky21_bot](https://t.me/kandinsky21_bot) Kandinsky (Изображения)
@@ -17,6 +18,7 @@
 - [https://hotpot.ai/art-generator](https://hotpot.ai/art-generator) Hotpot
 - [https://stablediffusionweb.com/](https://stablediffusionweb.com/) Stablediffusionweb
 - [https://www.adobe.com/sensei/generative-ai/firefly.html](https://www.adobe.com/sensei/generative-ai/firefly.html) Adobe Firefly 2
+- [https://creator.nightcafe.studio/](https://creator.nightcafe.studio/) Nightcafe (Генерация изображений и видео)
 
 ### Удаление фона с изображения
 

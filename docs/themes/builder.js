@@ -1,22 +1,21 @@
-import { getSidebar } from "./utils/sidebar";
-import { getNav } from "./utils/nav";
+import { getSidebar } from "../.vuepress/utils/sidebar";
+import { getNav } from "../.vuepress/utils/nav";
 
 // LEARN
-import { THEME_LEARN_JS, PATH_LEARN_JS } from "./themes/learn/learn-js";
-import { THEME_LEARN_GIT, PATH_LEARN_GIT } from "./themes/learn/learn-git";
+import { THEME_LEARN_JS, PATH_LEARN_JS } from "./learn/js/learn-js";
+import { THEME_LEARN_GIT, PATH_LEARN_GIT } from "./learn/git/learn-git";
 
 // REFERENCES
 import {
   THEME_REFERENCES_BOOKS,
   PATH_REFERENCES_BOOKS,
-} from "./themes/references/references-books";
+} from "./references/books/references-books";
 
 // USAGE
-import { THEME_USAGE_TECH, PATH_USAGE_ITECH } from "./themes/usage/usage-tech";
-import { THEME_USAGE_IDE, PATH_USAGE_IDE } from "./themes/usage/usage-ide";
+import { THEME_USAGE_TECH, PATH_USAGE_ITECH } from "./usage/tech/usage-tech";
+import { THEME_USAGE_IDE, PATH_USAGE_IDE } from "./usage/ide/usage-ide";
 
 export const NAV = [
-  // getNav('Title', PATH),
   {
     text: "Usage",
     children: [

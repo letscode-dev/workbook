@@ -1,7 +1,7 @@
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
-import { NAV, SIDEBAR } from "./builder";
+import { NAV, SIDEBAR } from "../themes/builder";
 
 import { getDirname, path } from "@vuepress/utils";
 

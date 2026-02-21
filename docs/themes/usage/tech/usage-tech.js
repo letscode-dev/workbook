@@ -4,10 +4,14 @@ const p = PATH_USAGE_ITECH + "/";
 
 export const THEME_USAGE_TECH = [
   {
-    title: "Не разработка",
+    title: "Roadmaps",
     children: [
-      [p + "other/services", "Сервисы общего назначения"],
+      [p + "roadmaps/react-frontend-developer", "React Frontend Developer"],
     ],
+  },
+  {
+    title: "Не разработка",
+    children: [[p + "other/services", "Сервисы общего назначения"]],
   },
   {
     title: "Нейросети",

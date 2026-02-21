@@ -10,8 +10,10 @@ export const THEME_UIKIT_UI: ISidebarTopics[] = [
     children: [
       [p + "components/v-details", "v-details"],
       [p + "components/v-iframe", "v-iframe"],
-      [p + "components/v-padding", "v-padding"],
       [p + "components/v-two", "v-two"],
+      [p + "components/v-breadcrumbs", "v-breadcrumbs"],
+      [p + "components/v-marker", "v-marker"],
+      [p + "components/v-padding", "v-padding"],
     ],
   },
 ];

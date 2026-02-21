@@ -65,6 +65,11 @@ export default defineUserConfig({
         ["v-iframe"]: path.resolve(__dirname, "./components/v-iframe.vue"),
         ["v-padding"]: path.resolve(__dirname, "./components/v-padding.vue"),
         ["v-two"]: path.resolve(__dirname, "./components/v-two.vue"),
+        ["v-marker"]: path.resolve(__dirname, "./components/v-marker.vue"),
+        ["v-breadcrumbs"]: path.resolve(
+          __dirname,
+          "./components/v-breadcrumbs.vue",
+        ),
       },
     }),
     // docsearchPlugin({

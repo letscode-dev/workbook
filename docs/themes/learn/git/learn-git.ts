@@ -1,8 +1,10 @@
+import { ISidebarThemes } from "../../../types";
+
 export const PATH_LEARN_GIT = "/learn/git";
 
 const p = PATH_LEARN_GIT + "/";
 
-export const THEME_LEARN_GIT = [
+export const THEME_LEARN_GIT: ISidebarThemes[] = [
   {
     title: "Теория",
     children: [

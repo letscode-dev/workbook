@@ -1,8 +1,10 @@
+import { ISidebarThemes } from "../../../types";
+
 export const PATH_USAGE_IDE = "/usage/ide";
 
 const p = PATH_USAGE_IDE + "/";
 
-export const THEME_USAGE_IDE = [
+export const THEME_USAGE_IDE: ISidebarThemes[] = [
   {
     title: "IDE",
     children: [

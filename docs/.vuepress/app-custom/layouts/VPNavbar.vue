@@ -1,11 +1,13 @@
-<script setup>
+<script setup lang="ts">
 import { computed } from "vue";
 import { AutoLink } from "vuepress/client";
+import { IHeaderMenuNav } from "../../../types";
+// @ts-ignore
 import { useNavbarConfig } from "@theme/useNavbarConfig";
 
 const navbarConfig = useNavbarConfig();
 
-const buildNavGroups = (items) => {
+const buildNavGroups = (items: IHeaderMenuNav[]) => {
   const result = [];
 
   for (const item of items) {

@@ -1,8 +1,13 @@
-<script setup>
+<script setup lang="ts">
+/// <reference path="../../env.d.ts" />
 // FIXME: Cursor. Не проверялся
+// @ts-ignore
 import { useScrollPromise } from "@theme/useScrollPromise";
+// @ts-ignore
 import { useSidebarItems } from "@theme/useSidebarItems";
+// @ts-ignore
 import { useThemeLocaleData } from "@theme/useThemeData";
+
 import VPHome from "@theme/VPHome.vue";
 import VPNavbar from "@theme/VPNavbar.vue";
 import VPPage from "@theme/VPPage.vue";
@@ -21,15 +26,19 @@ const shouldShowNavbar = computed(
 
 const sidebarItems = useSidebarItems();
 const isSidebarOpen = ref(false);
-const toggleSidebar = (to) => {
+
+const touchStart: { x: number; y: number } = { x: 0, y: 0 };
+
+const toggleSidebar = (to?: boolean): void => {
   isSidebarOpen.value = typeof to === "boolean" ? to : !isSidebarOpen.value;
 };
-const touchStart = { x: 0, y: 0 };
-const onTouchStart = (e) => {
+
+const onTouchStart = (e: TouchEvent): void => {
   touchStart.x = e.changedTouches[0].clientX;
   touchStart.y = e.changedTouches[0].clientY;
 };
-const onTouchEnd = (e) => {
+
+const onTouchEnd = (e: TouchEvent): void => {
   const dx = e.changedTouches[0].clientX - touchStart.x;
   const dy = e.changedTouches[0].clientY - touchStart.y;
   if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
@@ -55,13 +64,13 @@ const containerClass = computed(() => [
   frontmatter.value.pageClass,
 ]);
 
-let unregisterRouterHook;
+let unregisterRouterHook: (() => void) | undefined;
 onMounted(() => {
   const router = useRouter();
   unregisterRouterHook = router.afterEach(() => toggleSidebar(false));
 });
 onUnmounted(() => {
-  if (unregisterRouterHook) unregisterRouterHook();
+  unregisterRouterHook?.();
 });
 
 const scrollPromise = useScrollPromise();

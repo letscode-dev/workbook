@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import VPSidebarItems from "@theme/VPSidebarItems.vue";
 </script>
 

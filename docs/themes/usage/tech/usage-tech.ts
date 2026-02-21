@@ -1,10 +1,10 @@
-import { ISidebarThemes } from "../../../types";
+import { ISidebarTopics } from "../../../types";
 
 export const PATH_USAGE_ITECH = "/usage/tech";
 
 const p = PATH_USAGE_ITECH + "/";
 
-export const THEME_USAGE_TECH: ISidebarThemes[] = [
+export const THEME_USAGE_TECH: ISidebarTopics[] = [
   {
     title: "Roadmaps",
     children: [

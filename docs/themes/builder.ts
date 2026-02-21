@@ -1,5 +1,6 @@
 import { getSidebar } from "../.vuepress/utils/sidebar";
 import { getNav } from "../.vuepress/utils/nav";
+import { IHeaderMenuNav } from "../types";
 
 // LEARN
 import { THEME_LEARN_JS, PATH_LEARN_JS } from "./learn/js/learn-js";
@@ -15,7 +16,7 @@ import {
 import { THEME_USAGE_TECH, PATH_USAGE_ITECH } from "./usage/tech/usage-tech";
 import { THEME_USAGE_IDE, PATH_USAGE_IDE } from "./usage/ide/usage-ide";
 
-export const NAV = [
+export const NAV: IHeaderMenuNav[] = [
   {
     text: "Usage",
     children: [

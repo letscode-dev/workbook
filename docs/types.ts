@@ -1,6 +1,13 @@
-export type TSidebarItemTuple = [path: string, title: string];
+import { IGetNavReturn } from "./.vuepress/utils/nav";
 
-export interface ISidebarThemes {
+export type TSidebarTopicsItem = [path: string, title: string];
+
+export interface ISidebarTopics {
   title: string;
-  children: TSidebarItemTuple[];
+  children: TSidebarTopicsItem[];
+}
+
+export interface IHeaderMenuNav {
+  text: string;
+  children: IGetNavReturn[];
 }

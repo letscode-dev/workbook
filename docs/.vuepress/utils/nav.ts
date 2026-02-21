@@ -18,7 +18,7 @@ interface IGetNav {
   theme?: TTheme;
 }
 
-interface IGetNavReturn {
+export interface IGetNavReturn {
   text: string;
   link: string;
   theme: string;

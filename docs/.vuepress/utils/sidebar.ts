@@ -1,7 +1,7 @@
-import { ISidebarThemes, TSidebarItemTuple } from "../../types";
+import { ISidebarTopics, TSidebarTopicsItem } from "../../types";
 
 interface IGetSidebarChildren {
-  children: TSidebarItemTuple[];
+  children: TSidebarTopicsItem[];
   index: number;
   num?: number;
 }
@@ -16,7 +16,7 @@ const getSidebarChildren = ({ children, index, num }: IGetSidebarChildren) => {
 };
 
 interface IGetSidebar {
-  arr: ISidebarThemes[];
+  arr: ISidebarTopics[];
   path: string;
   num?: number;
 }

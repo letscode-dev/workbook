@@ -1,4 +1,4 @@
-export const PATH_LEARN_GIT = "/themes/learn/git";
+export const PATH_LEARN_GIT = "/learn/git";
 
 const p = PATH_LEARN_GIT + "/";
 

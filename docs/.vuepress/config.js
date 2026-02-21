@@ -14,6 +14,7 @@ import { searchPlugin } from "@vuepress/plugin-search";
 const __dirname = getDirname(import.meta.url);
 
 const BASE_NAME = "/workbook/";
+const ROUTE_PREFIX_TO_STRIP = "/themes";
 
 export default defineUserConfig({
   // TODO: [AppCustom]
@@ -50,6 +51,14 @@ export default defineUserConfig({
     logo: "./logo.png",
   }),
   plugins: [
+    {
+      name: "strip-themes-from-path",
+      extendsPage: (page) => {
+        if (page.path.startsWith(ROUTE_PREFIX_TO_STRIP + "/")) {
+          page.path = page.path.slice(ROUTE_PREFIX_TO_STRIP.length) || "/";
+        }
+      },
+    },
     registerComponentsPlugin({
       components: {
         ["v-details"]: path.resolve(__dirname, "./components/v-details.vue"),

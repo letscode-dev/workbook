@@ -1,4 +1,4 @@
-export const PATH_LEARN_JS = '/themes/learn/js';
+export const PATH_LEARN_JS = "/learn/js";
 
 const p = PATH_LEARN_JS+'/';
 

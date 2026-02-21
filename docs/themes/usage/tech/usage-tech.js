@@ -1,4 +1,4 @@
-export const PATH_USAGE_ITECH = "/themes/usage/tech";
+export const PATH_USAGE_ITECH = "/usage/tech";
 
 const p = PATH_USAGE_ITECH + "/";
 

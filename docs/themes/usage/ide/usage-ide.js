@@ -1,4 +1,4 @@
-export const PATH_USAGE_IDE = "/themes/usage/ide";
+export const PATH_USAGE_IDE = "/usage/ide";
 
 const p = PATH_USAGE_IDE + "/";
 

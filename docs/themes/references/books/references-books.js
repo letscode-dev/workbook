@@ -1,4 +1,4 @@
-export const PATH_REFERENCES_BOOKS = '/themes/references/books';
+export const PATH_REFERENCES_BOOKS = "/references/books";
 
 const p = PATH_REFERENCES_BOOKS+'/';
 

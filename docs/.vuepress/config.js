@@ -16,6 +16,20 @@ const __dirname = getDirname(import.meta.url);
 const BASE_NAME = "/workbook/";
 
 export default defineUserConfig({
+  alias: {
+    "@theme/VPNavbar.vue": path.resolve(
+      __dirname,
+      "./app-custom/layouts/VPNavbar.vue",
+    ),
+    "@theme/VPNavbarItems.vue": path.resolve(
+      __dirname,
+      "./app-custom/layouts/VPNavbarItems.vue",
+    ),
+    "@theme/VPSidebar.vue": path.resolve(
+      __dirname,
+      "./app-custom/layouts/VPSidebar.vue",
+    ),
+  },
   base: BASE_NAME,
   title: "Let's Code Workbook",
   head: [

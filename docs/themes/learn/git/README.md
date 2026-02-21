@@ -1,6 +1,6 @@
 ### Git
 
-::: tip <h3>⭐️ Hello</h3>
+::: tip ⭐️ Hello
 ```bash:no-line-numbers
 git commit -m 'Starter Commmit'
 ```

@@ -1,6 +1,6 @@
 ### JavaScript
 
-::: tip <h3>⭐️ Hello</h3>
+::: tip ⭐️ Hello
 ```js:no-line-numbers
 console.log('Say "Hello, World!"');
 ```

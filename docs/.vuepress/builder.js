@@ -12,21 +12,16 @@ import {
 } from "./themes/references/references-books";
 
 // USAGE
-import {
-  THEME_USAGE_TECH,
-  PATH_USAGE_ITECH,
-} from "./themes/usage/usage-tech";
+import { THEME_USAGE_TECH, PATH_USAGE_ITECH } from "./themes/usage/usage-tech";
 import { THEME_USAGE_IDE, PATH_USAGE_IDE } from "./themes/usage/usage-ide";
 
 export const NAV = [
   // getNav('Title', PATH),
-
-  // TODO: check
   {
     text: "Usage",
     children: [
-      getNav("Технологии", PATH_USAGE_ITECH + "/"),
-      getNav("IDE", PATH_USAGE_IDE + "/"),
+      getNav("Технологии", PATH_USAGE_ITECH + "/", "js"),
+      getNav("IDE", PATH_USAGE_IDE + "/", "node"),
     ],
   },
   {
@@ -36,20 +31,18 @@ export const NAV = [
       getNav("JavaScript", PATH_LEARN_JS + "/"),
     ],
   },
-  {
-    text: "Roadmaps",
-    children: [
-      {
-        text: "React Frontend Developer",
-        link: "/posts/roadmaps/react-frontend-developer",
-      },
-    ],
-  },
+  // {
+  //   text: "Roadmaps",
+  //   children: [
+  //     {
+  //       text: "React Frontend Developer",
+  //       link: "/posts/roadmaps/react-frontend-developer",
+  //     },
+  //   ],
+  // },
   {
     text: "Ссылки",
-    children: [
-      getNav("Книги", PATH_REFERENCES_BOOKS + "/"),
-    ],
+    children: [getNav("Книги", PATH_REFERENCES_BOOKS + "/")],
   },
 ];
 

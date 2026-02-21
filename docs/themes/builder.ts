@@ -16,6 +16,9 @@ import {
 import { THEME_USAGE_TECH, PATH_USAGE_ITECH } from "./usage/tech/usage-tech";
 import { THEME_USAGE_IDE, PATH_USAGE_IDE } from "./usage/ide/usage-ide";
 
+// UI-KIT
+import { THEME_UIKIT_UI, PATH_UIKIT_UI } from "./uikit/ui/uikit-ui";
+
 export const NAV: IHeaderMenuNav[] = [
   {
     text: "Usage",
@@ -54,6 +57,15 @@ export const NAV: IHeaderMenuNav[] = [
       }),
     ],
   },
+  {
+    text: "Utils",
+    children: [
+      getNav({
+        title: "Ui-Kit",
+        link: PATH_UIKIT_UI + "/",
+      }),
+    ],
+  },
 ];
 
 export const SIDEBAR = {
@@ -67,4 +79,7 @@ export const SIDEBAR = {
   // USAGE
   ...getSidebar({ arr: THEME_USAGE_TECH, path: PATH_USAGE_ITECH }),
   ...getSidebar({ arr: THEME_USAGE_IDE, path: PATH_USAGE_IDE }),
+
+  // UI-KIT
+  ...getSidebar({ arr: THEME_UIKIT_UI, path: PATH_UIKIT_UI }),
 };

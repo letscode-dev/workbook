@@ -3,19 +3,19 @@
 ```vue
 <v-two>
 <template v-slot:first>
-Left
+1️⃣
 </template>
 <template v-slot:last>
-Right
+2️⃣
 </template>
 </v-two>
 ```
 
 <v-two>
 <template v-slot:first>
-Left
+1️⃣
 </template>
 <template v-slot:last>
-Right
+2️⃣
 </template>
 </v-two>

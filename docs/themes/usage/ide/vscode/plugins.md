@@ -48,6 +48,11 @@
 - [Svg Preview](https://marketplace.visualstudio.com/items?itemName=SimonSiefke.svg-preview) - предпросмотр SVG
 - [Batch Runner](https://marketplace.visualstudio.com/items?itemName=NilsSoderman.batch-runner) - запуск Batch скриптов
 
+### Vue.js
+
+- [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - Vetur (Для Vue 2)
+- [Vetur](https://marketplace.visualstudio.com/items?itemName=Vue.volar) - Vue (Official) Volar (Для Vue 3)
+
 ### Other
 
 - [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) - AI pair programmer
@@ -56,4 +61,3 @@
 - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag) - автоматически переименовывает парные теги
 - [Image preview](https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview) - предпросмотр изображений
 - [Import Cost VSCode Extension](https://marketplace.visualstudio.com/items?itemName=wix.vscode-import-cost) - отображает размер импортированного пакета
-- [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur) - Vue tooling for VS Code

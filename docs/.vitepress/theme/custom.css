@@ -68,3 +68,12 @@
 .vp-theme-container--desktop .vp-doc .container {
   padding-top: 0;
 }
+
+/* Outline (VPDocAside) не должен заходить на vp-navbar: сдвигаем вниз */
+.vp-theme-container--desktop .vp-content .aside-container {
+  top: 0;
+  padding-top: max(
+    calc(var(--vp-nav-height, 0px) + var(--vp-layout-top-height, 0px) + var(--vp-doc-top-height, 0px) + 48px),
+    80px
+  );
+}

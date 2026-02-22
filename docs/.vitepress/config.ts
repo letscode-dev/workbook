@@ -41,6 +41,7 @@ function vitepressRewritesResolvePlugin() {
   };
 }
 
+
 export default defineConfig({
   base: BASE,
   title: "Let's Code Workbook",
@@ -57,6 +58,14 @@ export default defineConfig({
   ignoreDeadLinks: true,
   rewrites,
   vite: {
+    resolve: {
+      alias: {
+        "mark.js/src/lib/mark": path.join(__dirname, "..", "node_modules", "mark.js", "src", "lib", "mark.js"),
+      },
+    },
+    ssr: {
+      noExternal: ["mark.js"],
+    },
     plugins: [
       vitepressRewritesResolvePlugin(),
       {
@@ -82,6 +91,7 @@ export default defineConfig({
     })),
     sidebar: SIDEBAR,
     outline: { level: [2, 3] },
+    search: { provider: "local" },
   },
   markdown: {
     theme: "one-light",

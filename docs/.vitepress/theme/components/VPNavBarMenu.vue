@@ -52,12 +52,12 @@ function isActive(relativePath: string, link: string): boolean {
 </template>
 
 <style scoped>
-/* Только десктоп: кастомное меню (fieldset). На мобильном скрыто — используется стандартное меню в drawer. */
+/* Только десктоп (≥960px): кастомное меню (fieldset). Ниже 960px скрыто — меню в drawer. */
 .VPNavBarMenu.custom-nav {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 960px) {
   .VPNavBarMenu.custom-nav {
     display: flex;
   }

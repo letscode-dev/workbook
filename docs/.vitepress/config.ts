@@ -14,6 +14,12 @@ const customNavBarMenuPath = path.resolve(
   "components",
   "VPNavBarMenu.vue"
 );
+const customNavComposablePath = path.resolve(
+  __dirname,
+  "theme",
+  "composables",
+  "nav.js"
+);
 
 /** Rewrites: виртуальный путь без .md для совместимости с dev-сервером */
 function rewrites(id: string): string {
@@ -74,6 +80,20 @@ export default defineConfig({
         resolveId(id: string) {
           if (id.endsWith("VPNavBarMenu.vue")) {
             return customNavBarMenuPath;
+          }
+        },
+      },
+      {
+        name: "resolve-custom-nav-composable",
+        enforce: "pre",
+        resolveId(id: string, importer?: string) {
+          const fromDefaultTheme =
+            importer && importer.replace(/\\/g, "/").includes("theme-default");
+          const isNavComposable =
+            id === "../composables/nav" ||
+            id.replace(/\\/g, "/").endsWith("composables/nav.js");
+          if (fromDefaultTheme && isNavComposable) {
+            return customNavComposablePath;
           }
         },
       },

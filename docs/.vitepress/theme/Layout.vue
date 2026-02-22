@@ -17,7 +17,8 @@ import VPSidebar from "./components/VPSidebar.vue";
 
 const DefaultLayout = DefaultTheme.Layout;
 
-const isDesktop = ref(true);
+// mobile-first: пока не измерили экран, считаем мобильную версию (< 960px)
+const isDesktop = ref(false);
 
 onMounted(() => {
   const mq = window.matchMedia("(min-width: 960px)");

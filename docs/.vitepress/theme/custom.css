@@ -8,20 +8,63 @@
   max-width: 100%;
 }
 
-/* Кастомный layout только для десктопа (≥768px). На мобильном — базовый layout. */
-@media (min-width: 768px) {
-  .Layout {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+/* Десктоп: layout как в VuePress app-custom (vp-theme-container + vp-content + vp-sidebar) */
+.vp-theme-container--desktop {
+  display: flex;
+  height: 100vh;
+}
 
-  .VPContent {
-    flex-grow: 1;
-    overflow: auto;
-  }
+.vp-theme-container--desktop .vp-content {
+  flex-grow: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
 
-  .vp-doc .vp-doc-block-container {
-    padding-top: 0;
-  }
+/* Сайдбар в потоке (не fixed), 300px как в VuePress VPSidebar.vue */
+.vp-theme-container--desktop .VPSidebar {
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  width: 300px;
+  max-width: 300px;
+  flex-shrink: 0;
+  padding-top: 32px;
+  padding-bottom: 96px;
+  opacity: 1;
+  visibility: visible;
+  box-shadow: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+.vp-theme-container--desktop .VPSidebar .curtain {
+  display: none;
+}
+
+/* Контент без отступа под сайдбар (сайдбар уже в потоке) */
+.vp-theme-container--desktop .vp-content .VPContent {
+  padding-left: 0;
+  margin: 0;
+  padding-top: 0;
+}
+
+/* Навбар внутри vp-content — не фиксировать, как в VuePress */
+.vp-theme-container--desktop .vp-content .VPNav {
+  position: relative;
+  top: auto;
+}
+
+.vp-theme-container--desktop .vp-content .VPContent.has-sidebar {
+  padding-left: 0;
+}
+
+/* Страница без лишнего padding (как .vp-page в app-custom/index.scss) */
+.vp-theme-container--desktop .vp-doc .vp-doc-block-container,
+.vp-theme-container--desktop .vp-doc .container {
+  padding-top: 0;
 }

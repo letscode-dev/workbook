@@ -14,14 +14,16 @@ type NavGroup = {
   items: { text: string; link: string; theme?: string }[];
 };
 const groups = nav.filter(
-  (item): item is NavGroup => "items" in item && Array.isArray(item.items)
+  (item): item is NavGroup => "items" in item && Array.isArray(item.items),
 );
 
 function normalizePath(p: string): string {
-  return decodeURI(p)
-    .replace(/[?#].*$/, "")
-    .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
-    .replace(/\/$/, "") || "/";
+  return (
+    decodeURI(p)
+      .replace(/[?#].*$/, "")
+      .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
+      .replace(/\/$/, "") || "/"
+  );
 }
 
 function isActive(relativePath: string, link: string): boolean {
@@ -49,14 +51,14 @@ function isActive(relativePath: string, link: string): boolean {
             v-for="(item, key) in group.items"
             :key="key"
             :href="item.link"
-            :class="['link', 'theme-default', item.theme || 'theme-default']"
+            :class="[
+              'link',
+              'theme-default',
+              item.theme || 'theme-default',
+              { 'route-link-active': isActive(page.relativePath, item.link) },
+            ]"
           >
-            <span
-              :class="{
-                'route-link-active': isActive(page.relativePath, item.link),
-              }"
-              >{{ item.text }}</span
-            >
+            {{ item.text }}
           </VPLink>
         </div>
       </fieldset>
@@ -115,13 +117,11 @@ function isActive(relativePath: string, link: string): boolean {
 .link:hover {
   opacity: 0.7;
 }
-.link :deep(.route-link-active) {
-  outline: 2px solid #fff;
+/* :deep() — классы на корне VPLink (другой scope) */
+.link-wrapper :deep(a.route-link-active) {
   background-color: rgba(0, 0, 0, 0.7);
   border: 1px solid rgba(0, 0, 0, 0.7);
   color: #fff;
-  border-radius: 4px;
-  padding: 2px 4px;
 }
 
 /* Theme pills (из VuePress VPNavbar.vue) */

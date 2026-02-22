@@ -1,6 +1,6 @@
 # v-padding
 
-```vue:no-line-numbers:no-line-numbers
+```vue
 <v-padding padding="left" />
 <v-padding padding="right" />
 <v-padding padding="top" />

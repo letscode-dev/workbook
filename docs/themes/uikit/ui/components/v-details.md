@@ -1,6 +1,6 @@
 # v-details
 
-```vue:no-line-numbers:no-line-numbers
+```vue
 <v-details title="Title">
 Text
 </v-details>

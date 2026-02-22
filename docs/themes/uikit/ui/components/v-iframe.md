@@ -1,6 +1,6 @@
 # v-iframe
 
-```vue:no-line-numbers:no-line-numbers
+```vue
 <v-iframe height="550" src="https://codepen.io/LetsCode-Dev/embed/NWvOaaz" />
 ```
 

@@ -1,21 +1,26 @@
-## ⭐️ TODO
+# TODO
 
-**Поиск**
+## ⭐️ Фреймворк
+
+- https://vitepress.dev/ - VitePress
+
+## ⭐️ Поиск
+
 - Заменить базовый поиск на Algolia
 - https://ecosystem.vuejs.press/plugins/search/docsearch.html
 
-**TODO**
-- Добавить отдельную страницу `ui-kit` для кастомных ui-компонентов
+## ⭐️ TODO
+
+**Основное**
+
 - Заменить личные ссылки https://codepen.io/, на ссылки для школы
-
----
-
-## ⭐️ Дополнительно
-
-**Деплой**
+  **Дополнительно**
 - Деплой с GitHub Actions https://vuejs.press/guide/deployment.html#github-pages
 
+## 📌 FIXES
+
 **Информация снизу**
+
 - Показываются данные: Last Updated, Contributors, Prev Page, Next Page
 - https://v1.vuepress.vuejs.org/theme/default-theme-config.html#prev-next-links
 - Убрать через настройки

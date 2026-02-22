@@ -1,5 +1,6 @@
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
+import { useCustomLayout } from "../app-config";
 import Layout from "./Layout.vue";
 import VDetails from "../components/v-details.vue";
 import VIframe from "../components/v-iframe.vue";
@@ -12,7 +13,7 @@ import "./custom.css";
 
 export default {
   extends: DefaultTheme,
-  Layout,
+  ...(useCustomLayout && { Layout }),
   enhanceApp({ app }) {
     app.component("v-details", VDetails);
     app.component("v-iframe", VIframe);

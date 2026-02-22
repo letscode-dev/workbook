@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { NAV, SIDEBAR } from "../themes/builder-vitepress";
+import { useCustomLayout } from "./app-config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import fs from "node:fs";
@@ -74,29 +75,34 @@ export default defineConfig({
     },
     plugins: [
       vitepressRewritesResolvePlugin(),
-      {
-        name: "resolve-custom-navbar-menu",
-        enforce: "pre",
-        resolveId(id: string) {
-          if (id.endsWith("VPNavBarMenu.vue")) {
-            return customNavBarMenuPath;
-          }
-        },
-      },
-      {
-        name: "resolve-custom-nav-composable",
-        enforce: "pre",
-        resolveId(id: string, importer?: string) {
-          const fromDefaultTheme =
-            importer && importer.replace(/\\/g, "/").includes("theme-default");
-          const isNavComposable =
-            id === "../composables/nav" ||
-            id.replace(/\\/g, "/").endsWith("composables/nav.js");
-          if (fromDefaultTheme && isNavComposable) {
-            return customNavComposablePath;
-          }
-        },
-      },
+      ...(useCustomLayout
+        ? [
+            {
+              name: "resolve-custom-navbar-menu",
+              enforce: "pre" as const,
+              resolveId(id: string) {
+                if (id.endsWith("VPNavBarMenu.vue")) {
+                  return customNavBarMenuPath;
+                }
+              },
+            },
+            {
+              name: "resolve-custom-nav-composable",
+              enforce: "pre" as const,
+              resolveId(id: string, importer?: string) {
+                const fromDefaultTheme =
+                  importer &&
+                  importer.replace(/\\/g, "/").includes("theme-default");
+                const isNavComposable =
+                  id === "../composables/nav" ||
+                  id.replace(/\\/g, "/").endsWith("composables/nav.js");
+                if (fromDefaultTheme && isNavComposable) {
+                  return customNavComposablePath;
+                }
+              },
+            },
+          ]
+        : []),
     ],
   },
   themeConfig: {

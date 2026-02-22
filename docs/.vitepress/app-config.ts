@@ -1,0 +1,7 @@
+/**
+ * Главный конфиг приложения.
+ * Флаги и настройки, влияющие на тему и поведение docs.
+ */
+
+/** Включить кастомный layout (docs/.vitepress/theme/Layout.vue): сайдбар слева, свой навбар. false — стандартный вид VitePress (навбар и меню по умолчанию). */
+export const useCustomLayout = false;

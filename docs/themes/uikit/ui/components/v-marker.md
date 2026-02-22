@@ -1,11 +1,10 @@
 # v-marker
 
 ```vue
--
 <v-marker marker="+" />
-Плюс -
+Плюс
 <v-marker marker="-" />
-Минус -
+Минус
 <v-marker marker="*" />
 Звездочка
 ```

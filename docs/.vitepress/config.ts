@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { NAV, SIDEBAR } from "../themes/builder-vitepress";
+import { NAV, SIDEBAR } from "../wiki/builder-vitepress";
 import { useCustomLayout } from "./app-config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,18 +13,18 @@ const customNavBarMenuPath = path.resolve(
   __dirname,
   "theme",
   "components",
-  "VPNavBarMenu.vue"
+  "VPNavBarMenu.vue",
 );
 const customNavComposablePath = path.resolve(
   __dirname,
   "theme",
   "composables",
-  "nav.js"
+  "nav.js",
 );
 
 /** Rewrites: виртуальный путь без .md для совместимости с dev-сервером */
 function rewrites(id: string): string {
-  const m = id.match(/^themes\/(usage|learn|references|uikit)\/(.*)\.md$/);
+  const m = id.match(/^wiki\/(usage|learn|references|uikit)\/(.*)\.md$/);
   if (m) return `${m[1]}/${m[2]}`;
   return id;
 }
@@ -37,17 +37,16 @@ function vitepressRewritesResolvePlugin() {
     resolveId(id: string) {
       const clean = id.replace(/\?.*$/, "").replace(/^\/+/, "");
       const m = clean.match(
-        /^(?:workbook\/)?(usage|learn|references|uikit)\/(.+\.md)$/
+        /^(?:workbook\/)?(usage|learn|references|uikit)\/(.+\.md)$/,
       );
       if (!m) return null;
       const [, segment, rest] = m;
-      const resolved = path.join(DOCS_ROOT, "themes", segment, rest);
+      const resolved = path.join(DOCS_ROOT, "wiki", segment, rest);
       if (fs.existsSync(resolved)) return resolved;
       return null;
     },
   };
 }
-
 
 export default defineConfig({
   base: BASE,
@@ -57,7 +56,10 @@ export default defineConfig({
     ["link", { rel: "icon", href: BASE + "favicon.svg" }],
     ["meta", { name: "theme-color", content: "#3eaf7c" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
-    ["meta", { name: "apple-mobile-web-app-status-bar-style", content: "black" }],
+    [
+      "meta",
+      { name: "apple-mobile-web-app-status-bar-style", content: "black" },
+    ],
   ],
   srcDir: ".",
   outDir: ".vitepress/dist",
@@ -67,7 +69,15 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        "mark.js/src/lib/mark": path.join(__dirname, "..", "node_modules", "mark.js", "src", "lib", "mark.js"),
+        "mark.js/src/lib/mark": path.join(
+          __dirname,
+          "..",
+          "node_modules",
+          "mark.js",
+          "src",
+          "lib",
+          "mark.js",
+        ),
       },
     },
     ssr: {

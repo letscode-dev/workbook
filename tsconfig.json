@@ -18,8 +18,7 @@
   },
   "include": [
     "docs/**/*.ts",
-    "docs/**/*.vue",
-    "docs/.vuepress/env.d.ts"
+    "docs/**/*.vue"
   ],
-  "exclude": ["node_modules", "docs/.vuepress/dist", "docs/.vuepress/cache", "docs/.vuepress/.temp"]
+  "exclude": ["node_modules", "docs/.vitepress/dist", "docs/.vitepress/cache"]
 }

@@ -14,21 +14,18 @@ type TTheme =
   | "tech"
   | "theory";
 
-interface IGetNav {
-  title: string;
-  link: string;
-  theme?: TTheme;
-}
-
-export type { IGetNavReturn };
-export const getNav = ({
+export function getNav({
   title,
   link,
   theme = "default",
-}: IGetNav): IGetNavReturn => {
+}: {
+  title: string;
+  link: string;
+  theme?: TTheme;
+}): IGetNavReturn {
   return {
     text: title,
-    link: link,
+    link,
     theme: "theme-" + theme,
   };
-};
+}

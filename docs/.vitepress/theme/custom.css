@@ -1,0 +1,27 @@
+/* Переменные и контейнер (как в VuePress app-custom) */
+:root {
+  --vp-c-brand-1: #3eaf7c;
+  --vp-c-brand-2: #4abf8a;
+}
+
+.VPDoc .container {
+  max-width: 100%;
+}
+
+/* Кастомный layout только для десктопа (≥768px). На мобильном — базовый layout. */
+@media (min-width: 768px) {
+  .Layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .VPContent {
+    flex-grow: 1;
+    overflow: auto;
+  }
+
+  .vp-doc .vp-doc-block-container {
+    padding-top: 0;
+  }
+}

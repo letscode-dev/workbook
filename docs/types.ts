@@ -1,4 +1,8 @@
-import { IGetNavReturn } from "./.vuepress/utils/nav";
+export interface IGetNavReturn {
+  text: string;
+  link: string;
+  theme: string;
+}
 
 export type TSidebarTopicsItem = [path: string, title: string];
 

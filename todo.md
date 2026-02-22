@@ -1,8 +1,9 @@
 # TODO
 
-## ⭐️ Фреймворк
+## ⭐️ Фреймворк VitePress
 
-- https://vitepress.dev/ - VitePress
+- https://vitepress.dev/ru/ - VitePress
+- https://vitepress.dev/ru/guide/custom-theme - Пользовательская тема
 
 ## ⭐️ Поиск
 

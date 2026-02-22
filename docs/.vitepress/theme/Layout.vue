@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /**
  * Layout по структуре VuePress app-custom/layouts/Layout.vue:
- * — Десктоп (≥960px): vp-theme-container (flex, 100vh), сайдбар слева, vp-content справа (навбар + страница).
+ * — Десктоп (>960px): vp-theme-container (flex, 100vh), сайдбар слева, vp-content справа (навбар + страница).
  * — Мобильный: базовый layout VitePress (колонка, гамбургер, drawer).
  */
 import { ref, watch, onMounted, onUnmounted, computed } from "vue";
@@ -21,7 +21,7 @@ const DefaultLayout = DefaultTheme.Layout;
 const isDesktop = ref(false);
 
 onMounted(() => {
-  const mq = window.matchMedia("(min-width: 960px)");
+  const mq = window.matchMedia("(min-width: 961px)");
   isDesktop.value = mq.matches;
   const handler = () => {
     isDesktop.value = mq.matches;

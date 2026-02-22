@@ -78,15 +78,16 @@
   );
 }
 
-/* Мобильная версия до 960px: переопределяем брейкпоинт темы (768px → 960px) */
-@media (min-width: 768px) and (max-width: 959px) {
+/* Мобильная версия до 960px включительно: переопределяем брейкпоинт темы (768px → 960px) */
+@media (min-width: 768px) and (max-width: 960px) {
   .VPNavBarHamburger {
     display: flex !important;
   }
   .VPNavBarMenu {
     display: none !important;
   }
-  .VPNavScreen {
-    display: block;
+  /* Перебиваем scoped display:none темы, чтобы drawer открывался по клику на гамбургер */
+  #VPNavScreen.VPNavScreen {
+    display: block !important;
   }
 }

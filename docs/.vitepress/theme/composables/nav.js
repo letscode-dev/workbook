@@ -1,11 +1,11 @@
 /**
  * Копия useNav из темы VitePress с брейкпоинтом 960px вместо 768px:
- * мобильное меню (drawer) закрывается при resize только при ширине >= 960px.
+ * мобильное меню (drawer) закрывается при resize только при ширине > 960px.
  */
 import { useRoute } from "vitepress";
 import { ref, watch } from "vue";
 
-const MOBILE_BREAKPOINT = 960;
+const MOBILE_BREAKPOINT = 961;
 
 export function useNav() {
   const isScreenOpen = ref(false);

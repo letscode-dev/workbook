@@ -12,10 +12,15 @@
   </iframe>
 </template>
 
-<script>
-export default {
-  props: ["height", "src"],
-};
+<script setup lang="ts">
+interface Props {
+  src: string;
+  height?: string | number;
+}
+
+withDefaults(defineProps<Props>(), {
+  height: "400",
+});
 </script>
 
 <style scoped>

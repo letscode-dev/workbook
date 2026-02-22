@@ -6,10 +6,14 @@
   </span>
 </template>
 
-<script>
-export default {
-  props: ["marker"],
-};
+<script setup lang="ts">
+type MarkerType = "+" | "-" | "*";
+
+interface Props {
+  marker: MarkerType;
+}
+
+defineProps<Props>();
 </script>
 
 <style scoped></style>

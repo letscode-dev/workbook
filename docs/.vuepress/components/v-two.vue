@@ -9,12 +9,14 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    grow: { type: Boolean },
-  },
-};
+<script setup lang="ts">
+interface Props {
+  grow?: boolean;
+}
+
+withDefaults(defineProps<Props>(), {
+  grow: false,
+});
 </script>
 
 <style scoped>

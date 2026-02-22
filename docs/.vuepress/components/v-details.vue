@@ -5,10 +5,12 @@
   </details>
 </template>
 
-<script>
-export default {
-  props: ["title"],
-};
+<script setup lang="ts">
+interface Props {
+  title: string;
+}
+
+defineProps<Props>();
 </script>
 
 <style>

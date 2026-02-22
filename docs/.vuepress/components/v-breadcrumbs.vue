@@ -1,38 +1,32 @@
 <template>
   <span>
     <span v-for="(item, i) in items" :key="i">
-      <span v-html="getTag(item)"></span>
-      <span v-html="getSymbol()" v-if="i !== items.length - 1" />
+      <span v-html="getTag(item)" />
+      <template v-if="i !== items.length - 1">
+        <span v-html="getSymbol()" />
+      </template>
     </span>
   </span>
 </template>
 
-<script>
-export default {
-  props: {
-    items: Array,
-    keys: Boolean,
-  },
-  methods: {
-    getSymbol() {
-      let symbol = "➝";
+<script setup lang="ts">
+interface Props {
+  items: string[];
+  keys?: boolean;
+}
 
-      if (this.keys) {
-        symbol = "+";
-      }
+const props = withDefaults(defineProps<Props>(), {
+  keys: false,
+});
 
-      return `&nbsp;${symbol}&nbsp;&nbsp;`;
-    },
-    getTag(item) {
-      let className = "u-code-light";
+const getSymbol = (): string => {
+  const symbol = props.keys ? "+" : "➝";
+  return `\u00A0${symbol}\u00A0\u00A0`;
+};
 
-      if (this.keys) {
-        className = "u-code-text";
-      }
-
-      return `<span class="${className}">${item}</span>`;
-    },
-  },
+const getTag = (item: string): string => {
+  const className = props.keys ? "u-code-text" : "u-code-light";
+  return `<span class="${className}">${item}</span>`;
 };
 </script>
 

@@ -1,10 +1,8 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_UIKIT_UI = "/wiki/uikit/ui";
+export const p = "/wiki/uikit/ui/";
 
-const p = PATH_UIKIT_UI + "/";
-
-export const THEME_UIKIT_UI: ISidebarTopics[] = [
+export const t: ISidebarTopics[] = [
   {
     title: "Компоненты",
     children: [

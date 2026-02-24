@@ -1,10 +1,8 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_LEARN_GIT = "/wiki/learn/git";
+export const p = "/wiki/learn/git/";
 
-const p = PATH_LEARN_GIT + "/";
-
-export const THEME_LEARN_GIT: ISidebarTopics[] = [
+export const t: ISidebarTopics[] = [
   {
     title: "Теория",
     children: [

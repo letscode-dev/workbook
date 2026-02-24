@@ -1,10 +1,8 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_USAGE_IDE = "/wiki/usage/ide";
+export const p = "/wiki/usage/ide/";
 
-const p = PATH_USAGE_IDE + "/";
-
-export const THEME_USAGE_IDE: ISidebarTopics[] = [
+export const t: ISidebarTopics[] = [
   {
     title: "IDE",
     children: [

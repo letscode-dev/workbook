@@ -1,10 +1,8 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_LEARN_JS = "/wiki/learn/js";
+export const p = "/wiki/learn/js/";
 
-const p = PATH_LEARN_JS + "/";
-
-export const THEME_LEARN_JS: ISidebarTopics[] = [
+export const t: ISidebarTopics[] = [
   {
     title: "Основы",
     children: [

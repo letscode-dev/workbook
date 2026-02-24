@@ -1,10 +1,8 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_REFERENCES_BOOKS = "/wiki/references/books";
+export const p = "/wiki/references/books/";
 
-const p = PATH_REFERENCES_BOOKS + "/";
-
-export const THEME_REFERENCES_BOOKS: ISidebarTopics[] = [
+export const t: ISidebarTopics[] = [
   {
     title: "Технологии",
     children: [

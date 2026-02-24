@@ -1,37 +1,26 @@
 # TODO
 
-## ⭐️ Фреймворк VitePress
+- Удалить нижнрие виджеты с навигациям по страницам
+- Новый layout. Поиск - добавить белый фон
 
-- https://vitepress.dev/ru/ - VitePress
-- https://vitepress.dev/ru/guide/custom-theme - Пользовательская тема
+## ⭐️ UI-компоненты
 
-## ⭐️ Поиск
+**v-breadcrumbs.vue**
 
-- Заменить базовый поиск на Algolia
-- https://ecosystem.vuejs.press/plugins/search/docsearch.html
+- `.u-code-text` и `.u-code-light` вынести в глобальные классы
+
+**Новые компоненты**
+
+- Добавить реализацию компонентов из docs/.vitepress/components/new-components
+
+---
 
 ## ⭐️ TODO
 
 **Основное**
 
 - Заменить личные ссылки https://codepen.io/, на ссылки для школы
-  **Дополнительно**
+
+**Дополнительно**
+
 - Деплой с GitHub Actions https://vuejs.press/guide/deployment.html#github-pages
-
-## 📌 FIXES
-
-**Информация снизу**
-
-- Показываются данные: Last Updated, Contributors, Prev Page, Next Page
-- https://v1.vuepress.vuejs.org/theme/default-theme-config.html#prev-next-links
-- Убрать через настройки
-- Пока скрыто стилями
-
-> docs\.vuepress\styles\index.scss
-
-```css
-.vp-meta-item.git-info,
-.vp-page-nav {
-  display: none;
-}
-```

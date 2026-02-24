@@ -16,4 +16,10 @@ export const THEME_UIKIT_UI: ISidebarTopics[] = [
       [p + "components/v-padding", "v-padding"],
     ],
   },
+  {
+    title: "Категории",
+    children: [
+      [p + "category/custom-containers", "Custom Containers VitePress"],
+    ],
+  },
 ];

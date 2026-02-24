@@ -24,6 +24,7 @@ const customNavComposablePath = path.resolve(
 
 /** Rewrites: виртуальный путь без .md для совместимости с dev-сервером */
 function rewrites(id: string): string {
+  // FIXME: Править
   const m = id.match(/^wiki\/(usage|learn|references|uikit)\/(.*)\.md$/);
   if (m) return `${m[1]}/${m[2]}`;
   return id;
@@ -36,6 +37,7 @@ function vitepressRewritesResolvePlugin() {
     enforce: "pre" as const,
     resolveId(id: string) {
       const clean = id.replace(/\?.*$/, "").replace(/^\/+/, "");
+      // FIXME: Править
       const m = clean.match(
         /^(?:workbook\/)?(usage|learn|references|uikit)\/(.+\.md)$/,
       );

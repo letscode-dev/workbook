@@ -1,6 +1,6 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_UIKIT_UI = "/uikit/ui";
+export const PATH_UIKIT_UI = "/wiki/uikit/ui";
 
 const p = PATH_UIKIT_UI + "/";
 

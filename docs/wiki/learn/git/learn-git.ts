@@ -1,6 +1,6 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_LEARN_GIT = "/learn/git";
+export const PATH_LEARN_GIT = "/wiki/learn/git";
 
 const p = PATH_LEARN_GIT + "/";
 

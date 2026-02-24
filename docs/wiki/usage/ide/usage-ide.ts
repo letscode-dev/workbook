@@ -1,6 +1,6 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_USAGE_IDE = "/usage/ide";
+export const PATH_USAGE_IDE = "/wiki/usage/ide";
 
 const p = PATH_USAGE_IDE + "/";
 

@@ -1,6 +1,6 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_LEARN_JS = "/learn/js";
+export const PATH_LEARN_JS = "/wiki/learn/js";
 
 const p = PATH_LEARN_JS + "/";
 

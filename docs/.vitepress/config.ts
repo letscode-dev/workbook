@@ -3,11 +3,9 @@ import { NAV, SIDEBAR } from "../wiki/builder-vitepress";
 import { useCustomLayout } from "./app-config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import fs from "node:fs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE = "/workbook/";
-const DOCS_ROOT = path.join(__dirname, "..");
 
 const customNavBarMenuPath = path.resolve(
   __dirname,
@@ -21,34 +19,6 @@ const customNavComposablePath = path.resolve(
   "composables",
   "nav.js",
 );
-
-/** Rewrites: виртуальный путь без .md для совместимости с dev-сервером */
-function rewrites(id: string): string {
-  // FIXME: Править
-  const m = id.match(/^wiki\/(usage|learn|references|uikit)\/(.*)\.md$/);
-  if (m) return `${m[1]}/${m[2]}`;
-  return id;
-}
-
-/** Резолв виртуальных путей (usage/..., learn/...) в реальные файлы для dev */
-function vitepressRewritesResolvePlugin() {
-  return {
-    name: "vitepress-rewrites-resolve",
-    enforce: "pre" as const,
-    resolveId(id: string) {
-      const clean = id.replace(/\?.*$/, "").replace(/^\/+/, "");
-      // FIXME: Править
-      const m = clean.match(
-        /^(?:workbook\/)?(usage|learn|references|uikit)\/(.+\.md)$/,
-      );
-      if (!m) return null;
-      const [, segment, rest] = m;
-      const resolved = path.join(DOCS_ROOT, "wiki", segment, rest);
-      if (fs.existsSync(resolved)) return resolved;
-      return null;
-    },
-  };
-}
 
 export default defineConfig({
   base: BASE,
@@ -67,7 +37,6 @@ export default defineConfig({
   outDir: ".vitepress/dist",
   cacheDir: ".vitepress/cache",
   ignoreDeadLinks: true,
-  rewrites,
   vite: {
     resolve: {
       alias: {
@@ -86,7 +55,6 @@ export default defineConfig({
       noExternal: ["mark.js"],
     },
     plugins: [
-      vitepressRewritesResolvePlugin(),
       ...(useCustomLayout
         ? [
             {

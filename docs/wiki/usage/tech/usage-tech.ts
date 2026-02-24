@@ -1,6 +1,6 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_USAGE_ITECH = "/usage/tech";
+export const PATH_USAGE_ITECH = "/wiki/usage/tech";
 
 const p = PATH_USAGE_ITECH + "/";
 

@@ -6,21 +6,4 @@ hero:
   name: Let's Code Workbook
   text: Методичка и справочные материалы
   tagline: Ссылки и материалы по технологиям, обучению, книгам
-  actions:
-    - theme: brand
-      text: Начать
-      link: /usage/tech/
-features:
-  - title: Usage
-    details: Технологии, IDE, инструменты
-    link: /usage/tech/
-  - title: Обучение
-    details: Git, JavaScript
-    link: /learn/js/
-  - title: Ссылки
-    details: Книги и ресурсы
-    link: /references/books/
-  - title: Utils
-    details: Ui-Kit компоненты
-    link: /uikit/ui/
 ---

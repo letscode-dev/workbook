@@ -1,6 +1,6 @@
 import { ISidebarTopics } from "../../../types";
 
-export const PATH_REFERENCES_BOOKS = "/references/books";
+export const PATH_REFERENCES_BOOKS = "/wiki/references/books";
 
 const p = PATH_REFERENCES_BOOKS + "/";
 

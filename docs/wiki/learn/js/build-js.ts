@@ -51,8 +51,6 @@ const topics: ISidebarTopics[] = [
     title: "Сборщики и модули",
     children: [
       [p + "bundlers/nodejs", "Node.js и NPM"],
-      // [p+'bundlers/gulp',         'Сборщик Gulp'],
-      // [p+'bundlers/webpack',      'Сборщик Webpack'],
       [p + "bundlers/parcel", "Сборщик Parcel"],
       [p + "bundlers/modules", "Модульная система"],
       [p + "bundlers/modules-es6", "ES6-модули в JavaScript"],
@@ -79,29 +77,11 @@ const topics: ISidebarTopics[] = [
     title: "Инструменты",
     children: [
       [p + "instruments/canvas", "Рисование на Canvas"],
-      // [p+'instruments/chrome-sources',       'Отладка в браузере Chrome'],
+      [p + "instruments/chrome-sources", "Отладка в браузере Chrome"],
       [p + "instruments/jquery", "jQuery и jQuery UI"],
-      // [p+'instruments/libs',                 'Подключение сторонних скриптов'],
+      [p + "instruments/libs", "Подключение сторонних скриптов"],
     ],
   },
 ];
 
-/*
-[Функции]
-- Варианты объявления функций
-- arguments, ...rest
-- Параметры функции (ES6)
-- Замыкания
-
-- Тернарные операторы
-- Gulp
-*/
-
-const config: IBuildTopics = {
-  topics,
-  path,
-  title,
-  theme,
-};
-
-export default config;
+export default { topics, path, title, theme } satisfies IBuildTopics;

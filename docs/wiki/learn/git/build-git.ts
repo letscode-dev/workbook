@@ -37,11 +37,4 @@ const topics: ISidebarTopics[] = [
   },
 ];
 
-const config: IBuildTopics = {
-  topics,
-  path,
-  title,
-  theme,
-};
-
-export default config;
+export default { topics, path, title, theme } satisfies IBuildTopics;

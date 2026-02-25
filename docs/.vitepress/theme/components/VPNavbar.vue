@@ -7,32 +7,28 @@ import { IThemeConfigNav } from "../../../types";
 
 const { theme: themeConfig, page } = useData();
 
-const nav: IThemeConfigNav = themeConfig.value?.nav ?? [];
-
-type NavGroup = {
-  text: string;
-  items: { text: string; link: string; theme?: string }[];
-};
+const nav: IThemeConfigNav[] = themeConfig.value?.nav ?? [];
 
 const groups = nav.filter(
-  (item): item is NavGroup => "items" in item && Array.isArray(item.items),
+  (item): item is IThemeConfigNav =>
+    "items" in item && Array.isArray(item.items),
 );
 
-function normalizePath(p: string): string {
+const normalizePath = (p: string): string => {
   return (
     decodeURI(p)
       .replace(/[?#].*$/, "")
       .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
       .replace(/\/$/, "") || "/"
   );
-}
+};
 
-function isActive(relativePath: string, link: string): boolean {
+const isActive = (relativePath: string, link: string): boolean => {
   const current =
     "/" + relativePath.replace(/\.md$/, "").replace(/\/index$/, "");
   const norm = normalizePath(link);
   return current === norm || (norm !== "/" && current.startsWith(norm + "/"));
-}
+};
 </script>
 
 <template>
@@ -124,7 +120,20 @@ function isActive(relativePath: string, link: string): boolean {
   color: #fff;
 }
 
-/* Theme pills (из VuePress VPNavbar.vue) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+</style>
+
+<style scoped>
 .link.theme-default {
   color: rgb(35, 44, 46);
   background-color: rgba(225, 225, 225, 0.3);
@@ -186,17 +195,5 @@ function isActive(relativePath: string, link: string): boolean {
   color: rgb(136, 136, 136);
   background-color: rgba(233, 233, 233, 0.3);
   border: 1px solid rgb(216, 216, 216);
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
 }
 </style>

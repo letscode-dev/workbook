@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 import { NAV, SIDEBAR } from "../wiki/builder";
-import { useCustomLayout } from "./app-config";
+import { FF_CUSTOM_LAYOUT } from "../feature-flags";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -55,7 +55,7 @@ export default defineConfig({
       noExternal: ["mark.js"],
     },
     plugins: [
-      ...(useCustomLayout
+      ...(FF_CUSTOM_LAYOUT
         ? [
             {
               name: "resolve-custom-navbar-menu",

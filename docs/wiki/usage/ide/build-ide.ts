@@ -1,4 +1,4 @@
-import { ISidebarTopics, TThemeTopics } from "../../../types";
+import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
 
 const path = "/wiki/usage/ide/";
 const title = "IDE";
@@ -21,4 +21,11 @@ const topics: ISidebarTopics[] = [
   },
 ];
 
-export default { topics, path, title, theme };
+const config: IBuildTopics = {
+  topics,
+  path,
+  title,
+  theme,
+};
+
+export default config;

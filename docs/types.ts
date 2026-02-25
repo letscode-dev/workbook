@@ -19,9 +19,9 @@ export interface IHeaderMenuNav {
 }
 
 export interface IBuildTopics {
+  topics: ISidebarTopics[];
   path: string;
   title: string;
-  topics: ISidebarTopics[];
   theme: TThemeTopics;
 }
 

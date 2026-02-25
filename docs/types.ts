@@ -1,4 +1,4 @@
-export interface IGetNavReturn {
+export interface IHeaderMenuNavChildren {
   text: string;
   link: string;
   theme: TThemeTopics;
@@ -13,7 +13,7 @@ export interface ISidebarTopics {
 
 export interface IHeaderMenuNav {
   text: string;
-  children: IGetNavReturn[];
+  children: IHeaderMenuNavChildren[];
 }
 
 export interface IBuildTopics {
@@ -37,3 +37,8 @@ export type TThemeTopics =
   | "tech"
   | "theory"
   | null;
+
+export type IThemeConfigNav = {
+  text: string;
+  items: IHeaderMenuNavChildren[];
+}[];

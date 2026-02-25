@@ -1,20 +1,19 @@
 <script lang="ts" setup>
-// FIXME: Скорее всего дубль VPNavbar.vue
+// FIXME: Проверить файл после Cursor
 
-/**
- * Аналог docs/.vuepress/app-custom/layouts/VPNavbar.vue:
- * навбар с fieldset/legend и theme pills.
- */
 import { useData } from "vitepress";
 import { VPLink } from "vitepress/theme";
+import { IThemeConfigNav } from "../../../types";
 
 const { theme: themeConfig, page } = useData();
-const nav = themeConfig.value?.nav ?? [];
+
+const nav: IThemeConfigNav = themeConfig.value?.nav ?? [];
 
 type NavGroup = {
   text: string;
   items: { text: string; link: string; theme?: string }[];
 };
+
 const groups = nav.filter(
   (item): item is NavGroup => "items" in item && Array.isArray(item.items),
 );

@@ -1,4 +1,4 @@
-import type { IGetNavReturn, TThemeTopics } from "../../types";
+import type { IHeaderMenuNavChildren, TThemeTopics } from "../../types";
 
 interface IGetNav {
   title: string;
@@ -6,7 +6,11 @@ interface IGetNav {
   theme: TThemeTopics;
 }
 
-export function getNav({ title, link, theme }: IGetNav): IGetNavReturn {
+export function getNav({
+  title,
+  link,
+  theme,
+}: IGetNav): IHeaderMenuNavChildren {
   return {
     text: title,
     link,

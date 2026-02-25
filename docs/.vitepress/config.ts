@@ -3,6 +3,7 @@ import { NAV, SIDEBAR } from "../wiki/builder";
 import { FF_CUSTOM_LAYOUT } from "../feature-flags";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import type { IThemeConfigNav } from "../types";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE = "/workbook/";
@@ -79,7 +80,7 @@ export default defineConfig({
         link: c.link,
         theme: c.theme,
       })),
-    })),
+    })) satisfies IThemeConfigNav,
     sidebar: SIDEBAR,
     outline: { level: [2, 3] },
     search: { provider: "local" },

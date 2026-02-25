@@ -6,7 +6,6 @@ function getSidebarChildren(
   fullPath: string,
 ): DefaultTheme.SidebarItem[] {
   return children.map(([path, title]) => {
-    console.log(fullPath, path);
     return {
       text: `• ${title}`,
       link: fullPath + path,

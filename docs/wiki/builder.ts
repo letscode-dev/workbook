@@ -14,19 +14,19 @@ import WIKI_UI_KIT from "./system/ui-kit/build-ui-kit";
 export const NAV: IHeaderMenuNav[] = [
   {
     text: "Usage",
-    children: [getNav(WIKI_TECH), getNav(WIKI_IDE)],
+    children: getNav([WIKI_TECH, WIKI_IDE]),
   },
   {
     text: "Обучение",
-    children: [getNav(WIKI_GIT), getNav(WIKI_JS)],
+    children: getNav([WIKI_GIT, WIKI_JS]),
   },
   {
     text: "Ссылки",
-    children: [getNav(WIKI_BOOKS)],
+    children: getNav([WIKI_BOOKS]),
   },
   {
     text: "System",
-    children: [getNav(WIKI_UI_KIT)],
+    children: getNav([WIKI_UI_KIT]),
   },
 ];
 

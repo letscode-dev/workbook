@@ -1,19 +1,13 @@
-import type {
-  IBuildTopics,
-  IHeaderMenuNavChildren,
-  TThemeTopics,
-} from "../../types";
+import type { IBuildTopics, IHeaderMenuNavChildren } from "../../types";
 
-interface IGetNav {
-  title: string;
-  link: string;
-  theme: TThemeTopics;
-}
+export function getNav(data: IBuildTopics[]): IHeaderMenuNavChildren[] {
+  const result = data.map((dataItem) => {
+    return {
+      text: dataItem.title,
+      link: dataItem.path,
+      theme: dataItem.theme,
+    };
+  });
 
-export function getNav(data: IBuildTopics): IHeaderMenuNavChildren {
-  return {
-    text: data.title,
-    link: data.path,
-    theme: data.theme,
-  };
+  return result;
 }

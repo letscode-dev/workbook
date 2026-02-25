@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-// FIXME: Проверить файл после Cursor
-
 import { useData } from "vitepress";
 import { VPLink } from "vitepress/theme";
-import { IThemeConfigNav } from "../../../types";
+import type { IThemeConfigNav } from "../../../types";
 
 const { theme: themeConfig, page } = useData();
 
@@ -13,16 +11,26 @@ const groups: IThemeConfigNav[] = nav.filter(
   (item) => "items" in item && Array.isArray(item.items),
 );
 
+const currentPath = () =>
+  "/" + page.value.relativePath.replace(/\.md$/, "").replace(/\/index$/, "");
+
 const norm = (p: string) =>
   decodeURI(p)
     .replace(/[?#].*$/, "")
     .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
     .replace(/\/$/, "") || "/";
 
-const isActive = (link: string) => {
-  const current =
-    "/" + page.value.relativePath.replace(/\.md$/, "").replace(/\/index$/, "");
-  const n = norm(link);
+/** Как в теме VitePress: при activeMatch — regex по пути, иначе совпадение по link. */
+const isActive = (item: { link: string; activeMatch?: string }) => {
+  const current = currentPath();
+  if (item.activeMatch) {
+    try {
+      return new RegExp(item.activeMatch).test(current);
+    } catch {
+      return false;
+    }
+  }
+  const n = norm(item.link);
   return current === n || (n !== "/" && current.startsWith(n + "/"));
 };
 </script>
@@ -48,7 +56,7 @@ const isActive = (link: string) => {
               'link',
               'theme-default',
               item.theme && 'theme-' + item.theme,
-              isActive(item.link) && 'route-link-active',
+              isActive(item) && 'route-link-active',
             ]"
           >
             {{ item.text }}
@@ -104,17 +112,17 @@ const isActive = (link: string) => {
   white-space: nowrap;
   font-weight: 500;
   border-radius: 5px;
-  transition: opacity 0.2s;
+  transition: opacity 0.7s;
   cursor: pointer;
 }
 .link:hover {
   opacity: 0.7;
 }
-/* :deep() — классы на корне VPLink (другой scope) */
-.link-wrapper :deep(a.route-link-active) {
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.7);
-  color: #fff;
+.link.route-link-active {
+  outline: 2px solid #fff !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  border: 1px solid rgba(0, 0, 0, 0.7) !important;
+  color: #fff !important;
 }
 
 .visually-hidden {

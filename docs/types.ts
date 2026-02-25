@@ -2,6 +2,8 @@ export interface IHeaderMenuNavChildren {
   text: string;
   link: string;
   theme: TThemeTopics;
+  /** Regex string for active state (see VitePress nav activeMatch) */
+  activeMatch?: string;
 }
 
 export type TSidebarTopicsItem = [path: string, title: string];

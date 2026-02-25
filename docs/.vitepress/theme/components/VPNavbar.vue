@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+// FIXME: Проверить файл
+
 import { useData } from "vitepress";
 import { VPLink } from "vitepress/theme";
 import type { IThemeConfigNav } from "../../../types";

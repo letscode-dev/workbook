@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-/**
- * Аналог docs/.vuepress/app-custom/layouts/VPSidebar.vue:
- * сайдбар с поиском сверху (кнопка → модалка) и пунктами меню (VPSidebarGroup).
- */
+// FIXME: Проверить файл
+
 import { ref, watch } from "vue";
 import { useSidebar } from "vitepress/theme";
 import VPSidebarGroup from "vitepress/dist/client/theme-default/components/VPSidebarGroup.vue";
@@ -11,7 +9,13 @@ import VPNavBarSearchButton from "vitepress/dist/client/theme-default/components
 
 const { sidebarGroups, hasSidebar } = useSidebar();
 const groupKey = ref(0);
-watch(sidebarGroups, () => { groupKey.value += 1; }, { deep: true });
+watch(
+  sidebarGroups,
+  () => {
+    groupKey.value += 1;
+  },
+  { deep: true },
+);
 
 const showSearchModal = ref(false);
 </script>
@@ -19,13 +23,16 @@ const showSearchModal = ref(false);
 <template>
   <aside v-if="hasSidebar" class="vp-sidebar">
     <div class="vp-sidebar-search">
-      <VPLocalSearchBox v-if="showSearchModal" @close="showSearchModal = false" />
-      <VPNavBarSearchButton class="vp-sidebar-search-trigger" @click="showSearchModal = true" />
+      <VPLocalSearchBox
+        v-if="showSearchModal"
+        @close="showSearchModal = false"
+      />
+      <VPNavBarSearchButton
+        class="vp-sidebar-search-trigger"
+        @click="showSearchModal = true"
+      />
     </div>
-    <nav
-      class="vp-sidebar-items"
-      aria-labelledby="sidebar-aria-label"
-    >
+    <nav class="vp-sidebar-items" aria-labelledby="sidebar-aria-label">
       <span class="visually-hidden" id="sidebar-aria-label">
         Sidebar Navigation
       </span>

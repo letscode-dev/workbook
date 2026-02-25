@@ -13,20 +13,17 @@ const groups: IThemeConfigNav[] = nav.filter(
   (item) => "items" in item && Array.isArray(item.items),
 );
 
-const normalizePath = (p: string): string => {
-  return (
-    decodeURI(p)
-      .replace(/[?#].*$/, "")
-      .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
-      .replace(/\/$/, "") || "/"
-  );
-};
+const norm = (p: string) =>
+  decodeURI(p)
+    .replace(/[?#].*$/, "")
+    .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
+    .replace(/\/$/, "") || "/";
 
-const isActive = (relativePath: string, link: string): boolean => {
+const isActive = (link: string) => {
   const current =
-    "/" + relativePath.replace(/\.md$/, "").replace(/\/index$/, "");
-  const norm = normalizePath(link);
-  return current === norm || (norm !== "/" && current.startsWith(norm + "/"));
+    "/" + page.value.relativePath.replace(/\.md$/, "").replace(/\/index$/, "");
+  const n = norm(link);
+  return current === n || (n !== "/" && current.startsWith(n + "/"));
 };
 </script>
 
@@ -48,9 +45,10 @@ const isActive = (relativePath: string, link: string): boolean => {
             :key="key"
             :href="item.link"
             :class="[
+              'link',
               'theme-default',
               item.theme && 'theme-' + item.theme,
-              { 'route-link-active': isActive(page.relativePath, item.link) },
+              isActive(item.link) && 'route-link-active',
             ]"
           >
             {{ item.text }}

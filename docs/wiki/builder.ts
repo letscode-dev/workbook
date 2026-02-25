@@ -14,53 +14,19 @@ import WIKI_UI_KIT from "./system/ui-kit/build-ui-kit";
 export const NAV: IHeaderMenuNav[] = [
   {
     text: "Usage",
-    children: [
-      getNav({
-        title: WIKI_TECH.title,
-        link: WIKI_TECH.path,
-        theme: WIKI_TECH.theme,
-      }),
-      getNav({
-        title: WIKI_IDE.title,
-        link: WIKI_IDE.path,
-        theme: WIKI_IDE.theme,
-      }),
-    ],
+    children: [getNav(WIKI_TECH), getNav(WIKI_IDE)],
   },
   {
     text: "Обучение",
-    children: [
-      getNav({
-        title: WIKI_GIT.title,
-        link: WIKI_GIT.path,
-        theme: WIKI_GIT.theme,
-      }),
-      getNav({
-        title: WIKI_JS.title,
-        link: WIKI_JS.path,
-        theme: WIKI_JS.theme,
-      }),
-    ],
+    children: [getNav(WIKI_GIT), getNav(WIKI_JS)],
   },
   {
     text: "Ссылки",
-    children: [
-      getNav({
-        title: WIKI_BOOKS.title,
-        link: WIKI_BOOKS.path,
-        theme: WIKI_BOOKS.theme,
-      }),
-    ],
+    children: [getNav(WIKI_BOOKS)],
   },
   {
     text: "System",
-    children: [
-      getNav({
-        title: WIKI_UI_KIT.title,
-        link: WIKI_UI_KIT.path,
-        theme: WIKI_UI_KIT.theme,
-      }),
-    ],
+    children: [getNav(WIKI_UI_KIT)],
   },
 ];
 

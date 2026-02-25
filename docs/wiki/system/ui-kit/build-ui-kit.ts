@@ -4,25 +4,21 @@ const path = "/wiki/system/ui-kit/";
 const title = "Ui-Kit";
 const theme: TThemeTopics = null;
 
-const p = path;
-
 const topics: ISidebarTopics[] = [
   {
     title: "Компоненты",
     children: [
-      [p + "components/v-details", "v-details"],
-      [p + "components/v-iframe", "v-iframe"],
-      [p + "components/v-two", "v-two"],
-      [p + "components/v-breadcrumbs", "v-breadcrumbs"],
-      [p + "components/v-marker", "v-marker"],
-      [p + "components/v-padding", "v-padding"],
+      ["components/v-details", "v-details"],
+      ["components/v-iframe", "v-iframe"],
+      ["components/v-two", "v-two"],
+      ["components/v-breadcrumbs", "v-breadcrumbs"],
+      ["components/v-marker", "v-marker"],
+      ["components/v-padding", "v-padding"],
     ],
   },
   {
     title: "Категории",
-    children: [
-      [p + "category/custom-containers", "Custom Containers VitePress"],
-    ],
+    children: [["category/custom-containers", "Custom Containers VitePress"]],
   },
 ];
 

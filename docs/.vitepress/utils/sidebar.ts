@@ -1,36 +1,28 @@
 import type { DefaultTheme } from "vitepress";
-import type { ISidebarTopics, TSidebarTopicsItem } from "../../types";
+import type { IBuildTopics, TSidebarTopicsItem } from "../../types";
 
 function getSidebarChildren(
   children: TSidebarTopicsItem[],
-  index: number,
-  num?: number,
+  fullPath: string,
 ): DefaultTheme.SidebarItem[] {
-  return children.map(([path, title], indexChildren) => ({
-    text: num ? `${index + 1}.${indexChildren + 1} ${title}` : `• ${title}`,
-    link: path,
-  }));
+  return children.map(([path, title]) => {
+    console.log(fullPath, path);
+    return {
+      text: `• ${title}`,
+      link: fullPath + path,
+    };
+  });
 }
 
-interface IGetSidebar {
-  topics: ISidebarTopics[];
-  path: string;
-  num?: number;
-}
-
-// FIXME: Перебрать "topics" и к каждому добавить "path"
-// Удалить из файлов build: [p + "basic/ecmascript", "Стандарт ECMAScript"]
-export function getSidebar({
-  topics,
-  path,
-  num,
-}: IGetSidebar): Record<string, DefaultTheme.SidebarItem[]> {
-  const result: DefaultTheme.SidebarItem[] = topics.map(
-    ({ title, children }, index) => ({
+export function getSidebar(
+  data: IBuildTopics,
+): Record<string, DefaultTheme.SidebarItem[]> {
+  const result: DefaultTheme.SidebarItem[] = data.topics.map(
+    ({ title, children }) => ({
       text: title,
-      items: getSidebarChildren(children, index, num),
+      items: getSidebarChildren(children, data.path),
     }),
   );
-  const key = path.endsWith("/") ? path : path + "/";
-  return { [key]: result };
+
+  return { [data.path]: result };
 }

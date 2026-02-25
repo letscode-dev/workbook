@@ -4,35 +4,33 @@ const path = "/wiki/learn/git/";
 const title = "Git";
 const theme: TThemeTopics = "node";
 
-const p = path;
-
 const topics: ISidebarTopics[] = [
   {
     title: "Теория",
     children: [
-      [p + "info/operation-principle", "Принцип работы Git"],
-      [p + "info/notes", "Примечания"],
+      ["info/operation-principle", "Принцип работы Git"],
+      ["info/notes", "Примечания"],
     ],
   },
   {
     title: "Темы",
     children: [
-      [p + "themes/init", "Инициализация репозитория (init, status, config)"],
-      [p + "themes/commit", "Сохранение изменений (add, commit)"],
-      [p + "themes/reset", "Отмена изменений файлов (reset, restore, clean)"],
-      [p + "themes/push", "Загрузка на удаленный репозиторий (push, remote)"],
-      [p + "themes/clone", "Клонирование с удаленного репозитория (clone)"],
+      ["themes/init", "Инициализация репозитория (init, status, config)"],
+      ["themes/commit", "Сохранение изменений (add, commit)"],
+      ["themes/reset", "Отмена изменений файлов (reset, restore, clean)"],
+      ["themes/push", "Загрузка на удаленный репозиторий (push, remote)"],
+      ["themes/clone", "Клонирование с удаленного репозитория (clone)"],
       [
-        p + "themes/pull",
+        "themes/pull",
         "Получение данных с удаленного репозитория (fetch, pull)",
       ],
       [
-        p + "themes/branch",
+        "themes/branch",
         "Работа с ветками и коммитами (branch, checkout, log, cherry-pick, stash)",
       ],
-      [p + "themes/merge", "Слияние веток (merge)"],
-      [p + "themes/rebase", "Перемещение веток (rebase)"],
-      [p + "themes/merge-vs-rebase", "Merge vs Rebase"],
+      ["themes/merge", "Слияние веток (merge)"],
+      ["themes/rebase", "Перемещение веток (rebase)"],
+      ["themes/merge-vs-rebase", "Merge vs Rebase"],
     ],
   },
 ];

@@ -31,10 +31,10 @@ export const NAV: IHeaderMenuNav[] = [
 ];
 
 export const SIDEBAR = {
-  ...getSidebar({ topics: WIKI_JS.topics, path: WIKI_JS.path }),
-  ...getSidebar({ topics: WIKI_GIT.topics, path: WIKI_GIT.path }),
-  ...getSidebar({ topics: WIKI_BOOKS.topics, path: WIKI_BOOKS.path }),
-  ...getSidebar({ topics: WIKI_TECH.topics, path: WIKI_TECH.path }),
-  ...getSidebar({ topics: WIKI_IDE.topics, path: WIKI_IDE.path }),
-  ...getSidebar({ topics: WIKI_UI_KIT.topics, path: WIKI_UI_KIT.path }),
+  ...getSidebar(WIKI_JS),
+  ...getSidebar(WIKI_GIT),
+  ...getSidebar(WIKI_BOOKS),
+  ...getSidebar(WIKI_TECH),
+  ...getSidebar(WIKI_IDE),
+  ...getSidebar(WIKI_UI_KIT),
 };

@@ -4,25 +4,23 @@ const path = "/wiki/references/books/";
 const title = "Книги";
 const theme: TThemeTopics = null;
 
-const p = path;
-
 const topics: ISidebarTopics[] = [
   {
     title: "Технологии",
     children: [
-      [p + "tech/javascript", "JavaScript"],
-      [p + "tech/html", "HTML и CSS"],
-      [p + "tech/react", "React.js"],
-      [p + "tech/redux", "Redux"],
-      [p + "tech/typescript", "TypeScript"],
-      [p + "tech/git", "Git"],
+      ["tech/javascript", "JavaScript"],
+      ["tech/html", "HTML и CSS"],
+      ["tech/react", "React.js"],
+      ["tech/redux", "Redux"],
+      ["tech/typescript", "TypeScript"],
+      ["tech/git", "Git"],
     ],
   },
   {
     title: "Общее",
     children: [
-      [p + "common/books", "Книги"],
-      [p + "common/articles", "Статьи"],
+      ["common/books", "Книги"],
+      ["common/articles", "Статьи"],
     ],
   },
 ];

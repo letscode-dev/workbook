@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { NAV, SIDEBAR } from "../wiki/builder-vitepress";
+import { NAV, SIDEBAR } from "../wiki/builder";
 import { useCustomLayout } from "./app-config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";

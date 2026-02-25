@@ -80,7 +80,7 @@ export default defineConfig({
         link: c.link,
         theme: c.theme,
       })),
-    })) satisfies IThemeConfigNav,
+    })) satisfies IThemeConfigNav[],
     sidebar: SIDEBAR,
     outline: { level: [2, 3] },
     search: { provider: "local" },

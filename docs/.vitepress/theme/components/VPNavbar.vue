@@ -9,9 +9,8 @@ const { theme: themeConfig, page } = useData();
 
 const nav: IThemeConfigNav[] = themeConfig.value?.nav ?? [];
 
-const groups = nav.filter(
-  (item): item is IThemeConfigNav =>
-    "items" in item && Array.isArray(item.items),
+const groups: IThemeConfigNav[] = nav.filter(
+  (item) => "items" in item && Array.isArray(item.items),
 );
 
 const normalizePath = (p: string): string => {

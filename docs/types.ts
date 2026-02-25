@@ -41,4 +41,4 @@ export type TThemeTopics =
 export type IThemeConfigNav = {
   text: string;
   items: IHeaderMenuNavChildren[];
-}[];
+};

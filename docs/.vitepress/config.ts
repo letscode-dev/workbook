@@ -17,6 +17,7 @@ const customNavComposablePath = path.resolve(
 
 export default defineConfig({
   base: BASE,
+  // FIXME: Разные значения для разных проектов
   title: "Let's Code Workbook",
   description: "Методичка и справочные материалы",
   head: [

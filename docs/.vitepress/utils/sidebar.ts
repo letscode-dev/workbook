@@ -12,15 +12,16 @@ function getSidebarChildren(
   }));
 }
 
+interface IGetSidebar {
+  topics: ISidebarTopics[];
+  path: string;
+  num?: number;
+}
 export function getSidebar({
   topics,
   path,
   num,
-}: {
-  topics: ISidebarTopics[];
-  path: string;
-  num?: number;
-}): Record<string, DefaultTheme.SidebarItem[]> {
+}: IGetSidebar): Record<string, DefaultTheme.SidebarItem[]> {
   const result: DefaultTheme.SidebarItem[] = topics.map(
     ({ title, children }, index) => ({
       text: title,

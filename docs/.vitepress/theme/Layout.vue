@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// FIXME: Проверить файл
+
 /**
  * Layout по структуре VuePress app-custom/layouts/Layout.vue:
  * — Десктоп (>960px): vp-theme-container (flex, 100vh), сайдбар слева, vp-content справа (навбар + страница).
@@ -31,7 +33,12 @@ onMounted(() => {
 });
 
 const { frontmatter, theme: themeConfig } = useData();
-const { isOpen: isSidebarOpen, close: closeSidebar, open: openSidebar, hasSidebar } = useSidebar();
+const {
+  isOpen: isSidebarOpen,
+  close: closeSidebar,
+  open: openSidebar,
+  hasSidebar,
+} = useSidebar();
 const route = useRoute();
 
 const touchStart = { x: 0, y: 0 };
@@ -54,7 +61,7 @@ const showLayout = computed(() => frontmatter.value.layout !== false);
 const shouldShowNavbar = computed(
   () =>
     frontmatter.value.navbar !== false &&
-    (themeConfig.value?.nav?.length ?? true)
+    (themeConfig.value?.nav?.length ?? true),
 );
 const containerClass = computed(() => [
   "vp-theme-container",
@@ -83,57 +90,67 @@ const containerClass = computed(() => [
         @click="closeSidebar"
       />
       <VPSidebar>
-        <template #sidebar-nav-before><slot name="sidebar-nav-before" /></template>
-        <template #sidebar-nav-after><slot name="sidebar-nav-after" /></template>
+        <template #sidebar-nav-before
+          ><slot name="sidebar-nav-before"
+        /></template>
+        <template #sidebar-nav-after
+          ><slot name="sidebar-nav-after"
+        /></template>
       </VPSidebar>
       <div class="vp-content">
         <VPNavbar v-if="shouldShowNavbar" />
         <VPLocalNav :open="isSidebarOpen" @open-menu="openSidebar" />
         <Transition name="fade-slide-y" mode="out-in">
           <VPContent :key="route.path">
-          <template #page-top><slot name="page-top" /></template>
-          <template #page-bottom><slot name="page-bottom" /></template>
-          <template #not-found><slot name="not-found" /></template>
-          <template #home-hero-before><slot name="home-hero-before" /></template>
-          <template #home-hero-info-before
-            ><slot name="home-hero-info-before" /></template
-          >
-          <template #home-hero-info><slot name="home-hero-info" /></template>
-          <template #home-hero-info-after
-            ><slot name="home-hero-info-after" /></template
-          >
-          <template #home-hero-actions-after
-            ><slot name="home-hero-actions-after" /></template
-          >
-          <template #home-hero-image><slot name="home-hero-image" /></template>
-          <template #home-hero-after><slot name="home-hero-after" /></template>
-          <template #home-features-before
-            ><slot name="home-features-before" /></template
-          >
-          <template #home-features-after
-            ><slot name="home-features-after" /></template
-          >
-          <template #doc-footer-before
-            ><slot name="doc-footer-before" /></template
-          >
-          <template #doc-before><slot name="doc-before" /></template>
-          <template #doc-after><slot name="doc-after" /></template>
-          <template #doc-top><slot name="doc-top" /></template>
-          <template #doc-bottom><slot name="doc-bottom" /></template>
-          <template #aside-top><slot name="aside-top" /></template>
-          <template #aside-outline-before
-            ><slot name="aside-outline-before" /></template
-          >
-          <template #aside-outline-after
-            ><slot name="aside-outline-after" /></template
-          >
-          <template #aside-ads-before
-            ><slot name="aside-ads-before" /></template
-          >
-          <template #aside-ads-after
-            ><slot name="aside-ads-after" /></template
-          >
-          <template #aside-bottom><slot name="aside-bottom" /></template>
+            <template #page-top><slot name="page-top" /></template>
+            <template #page-bottom><slot name="page-bottom" /></template>
+            <template #not-found><slot name="not-found" /></template>
+            <template #home-hero-before
+              ><slot name="home-hero-before"
+            /></template>
+            <template #home-hero-info-before
+              ><slot name="home-hero-info-before"
+            /></template>
+            <template #home-hero-info><slot name="home-hero-info" /></template>
+            <template #home-hero-info-after
+              ><slot name="home-hero-info-after"
+            /></template>
+            <template #home-hero-actions-after
+              ><slot name="home-hero-actions-after"
+            /></template>
+            <template #home-hero-image
+              ><slot name="home-hero-image"
+            /></template>
+            <template #home-hero-after
+              ><slot name="home-hero-after"
+            /></template>
+            <template #home-features-before
+              ><slot name="home-features-before"
+            /></template>
+            <template #home-features-after
+              ><slot name="home-features-after"
+            /></template>
+            <template #doc-footer-before
+              ><slot name="doc-footer-before"
+            /></template>
+            <template #doc-before><slot name="doc-before" /></template>
+            <template #doc-after><slot name="doc-after" /></template>
+            <template #doc-top><slot name="doc-top" /></template>
+            <template #doc-bottom><slot name="doc-bottom" /></template>
+            <template #aside-top><slot name="aside-top" /></template>
+            <template #aside-outline-before
+              ><slot name="aside-outline-before"
+            /></template>
+            <template #aside-outline-after
+              ><slot name="aside-outline-after"
+            /></template>
+            <template #aside-ads-before
+              ><slot name="aside-ads-before"
+            /></template>
+            <template #aside-ads-after
+              ><slot name="aside-ads-after"
+            /></template>
+            <template #aside-bottom><slot name="aside-bottom" /></template>
           </VPContent>
         </Transition>
       </div>
@@ -163,18 +180,14 @@ const containerClass = computed(() => [
       <template #sidebar-nav-before
         ><slot name="sidebar-nav-before"
       /></template>
-      <template #sidebar-nav-after
-        ><slot name="sidebar-nav-after"
-      /></template>
+      <template #sidebar-nav-after><slot name="sidebar-nav-after" /></template>
       <template #page-top><slot name="page-top" /></template>
       <template #page-bottom><slot name="page-bottom" /></template>
       <template #doc-before><slot name="doc-before" /></template>
       <template #doc-after><slot name="doc-after" /></template>
       <template #doc-top><slot name="doc-top" /></template>
       <template #doc-bottom><slot name="doc-bottom" /></template>
-      <template #doc-footer-before
-        ><slot name="doc-footer-before"
-      /></template>
+      <template #doc-footer-before><slot name="doc-footer-before" /></template>
       <template #aside-top><slot name="aside-top" /></template>
       <template #aside-bottom><slot name="aside-bottom" /></template>
       <template #aside-outline-before

@@ -10,7 +10,9 @@ import WIKI_IDE from "./usage/ide/usage-ide";
 
 import WIKI_UI_KIT from "./uikit/ui/uikit-ui";
 
-// FIXME: В getNav и getSidebar сразу передавать объект
+// FIXME:
+// - В getNav и getSidebar сразу передавать объект
+// - "p" добавлять в getSidebar: [p + "basic/ecmascript", "Стандарт ECMAScript"]
 
 export const NAV: IHeaderMenuNav[] = [
   {

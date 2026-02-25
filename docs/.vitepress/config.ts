@@ -7,12 +7,6 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const BASE = "/workbook/";
 
-const customNavBarMenuPath = path.resolve(
-  __dirname,
-  "theme",
-  "components",
-  "VPNavBarMenu.vue",
-);
 const customNavComposablePath = path.resolve(
   __dirname,
   "theme",
@@ -57,15 +51,6 @@ export default defineConfig({
     plugins: [
       ...(FF_CUSTOM_LAYOUT
         ? [
-            {
-              name: "resolve-custom-navbar-menu",
-              enforce: "pre" as const,
-              resolveId(id: string) {
-                if (id.endsWith("VPNavBarMenu.vue")) {
-                  return customNavBarMenuPath;
-                }
-              },
-            },
             {
               name: "resolve-custom-nav-composable",
               enforce: "pre" as const,

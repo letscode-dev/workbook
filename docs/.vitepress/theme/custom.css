@@ -120,9 +120,6 @@
   .VPNavBarHamburger {
     display: flex !important;
   }
-  .VPNavBarMenu {
-    display: none !important;
-  }
   /* Перебиваем scoped display:none темы, чтобы drawer открывался по клику на гамбургер */
   #VPNavScreen.VPNavScreen {
     display: block !important;

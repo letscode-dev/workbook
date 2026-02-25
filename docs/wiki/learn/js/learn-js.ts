@@ -1,8 +1,10 @@
 import { ISidebarTopics } from "../../../types";
 
-export const p = "/wiki/learn/js/";
+const path = "/wiki/learn/js/";
+const title = "JavaScript";
+const p = path;
 
-export const t: ISidebarTopics[] = [
+const topics: ISidebarTopics[] = [
   {
     title: "Основы",
     children: [
@@ -92,3 +94,5 @@ export const t: ISidebarTopics[] = [
 - Тернарные операторы
 - Gulp
 */
+
+export default { path, topics, title };

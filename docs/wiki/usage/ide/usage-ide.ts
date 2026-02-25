@@ -1,8 +1,10 @@
 import { ISidebarTopics } from "../../../types";
 
-export const p = "/wiki/usage/ide/";
+const path = "/wiki/usage/ide/";
+const title = "IDE";
+const p = path;
 
-export const t: ISidebarTopics[] = [
+const topics: ISidebarTopics[] = [
   {
     title: "IDE",
     children: [
@@ -16,3 +18,5 @@ export const t: ISidebarTopics[] = [
     children: [[p + "vscode/plugins", "Плагины"]],
   },
 ];
+
+export default { path, topics, title };

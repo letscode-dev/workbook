@@ -1,8 +1,10 @@
 import { ISidebarTopics } from "../../../types";
 
-export const p = "/wiki/learn/git/";
+const path = "/wiki/learn/git/";
+const title = "Git";
+const p = path;
 
-export const t: ISidebarTopics[] = [
+const topics: ISidebarTopics[] = [
   {
     title: "Теория",
     children: [
@@ -32,3 +34,5 @@ export const t: ISidebarTopics[] = [
     ],
   },
 ];
+
+export default { path, topics, title };

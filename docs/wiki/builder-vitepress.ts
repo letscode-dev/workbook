@@ -2,59 +2,46 @@ import { getSidebar } from "../.vitepress/utils/sidebar";
 import { getNav } from "../.vitepress/utils/nav";
 import type { IHeaderMenuNav } from "../types";
 
-import { t as THEME_LEARN_JS, p as PATH_LEARN_JS } from "./learn/js/learn-js";
-import {
-  t as THEME_LEARN_GIT,
-  p as PATH_LEARN_GIT,
-} from "./learn/git/learn-git";
-import {
-  t as THEME_REFERENCES_BOOKS,
-  p as PATH_REFERENCES_BOOKS,
-} from "./references/books/references-books";
-import {
-  t as THEME_USAGE_TECH,
-  p as PATH_USAGE_ITECH,
-} from "./usage/tech/usage-tech";
-import {
-  t as THEME_USAGE_IDE,
-  p as PATH_USAGE_IDE,
-} from "./usage/ide/usage-ide";
-import { t as THEME_UIKIT_UI, p as PATH_UIKIT_UI } from "./uikit/ui/uikit-ui";
+import WIKI_JS from "./learn/js/learn-js";
+import WIKI_GIT from "./learn/git/learn-git";
+import WIKI_BOOKS from "./references/books/references-books";
+import WIKI_TECH from "./usage/tech/usage-tech";
+import WIKI_IDE from "./usage/ide/usage-ide";
+
+import WIKI_UI_KIT from "./uikit/ui/uikit-ui";
+
+// FIXME: В getNav и getSidebar сразу передавать объект
 
 export const NAV: IHeaderMenuNav[] = [
   {
     text: "Usage",
     children: [
-      getNav({
-        title: "Технологии",
-        link: PATH_USAGE_ITECH,
-        theme: "js",
-      }),
-      getNav({ title: "IDE", link: PATH_USAGE_IDE + "/", theme: "node" }),
+      getNav({ title: WIKI_TECH.title, link: WIKI_TECH.path, theme: "js" }),
+      getNav({ title: WIKI_IDE.title, link: WIKI_IDE.path, theme: "node" }),
     ],
   },
   {
     text: "Обучение",
     children: [
-      getNav({ title: "Git", link: PATH_LEARN_GIT + "/" }),
-      getNav({ title: "JavaScript", link: PATH_LEARN_JS + "/" }),
+      getNav({ title: WIKI_GIT.title, link: WIKI_GIT.path }),
+      getNav({ title: WIKI_JS.title, link: WIKI_JS.path }),
     ],
   },
   {
     text: "Ссылки",
-    children: [getNav({ title: "Книги", link: PATH_REFERENCES_BOOKS + "/" })],
+    children: [getNav({ title: WIKI_BOOKS.title, link: WIKI_BOOKS.path })],
   },
   {
     text: "Utils",
-    children: [getNav({ title: "Ui-Kit", link: PATH_UIKIT_UI + "/" })],
+    children: [getNav({ title: WIKI_UI_KIT.title, link: WIKI_UI_KIT.path })],
   },
 ];
 
 export const SIDEBAR = {
-  ...getSidebar({ arr: THEME_LEARN_JS, path: PATH_LEARN_JS }),
-  ...getSidebar({ arr: THEME_LEARN_GIT, path: PATH_LEARN_GIT }),
-  ...getSidebar({ arr: THEME_REFERENCES_BOOKS, path: PATH_REFERENCES_BOOKS }),
-  ...getSidebar({ arr: THEME_USAGE_TECH, path: PATH_USAGE_ITECH }),
-  ...getSidebar({ arr: THEME_USAGE_IDE, path: PATH_USAGE_IDE }),
-  ...getSidebar({ arr: THEME_UIKIT_UI, path: PATH_UIKIT_UI }),
+  ...getSidebar({ arr: WIKI_JS.topics, path: WIKI_JS.path }),
+  ...getSidebar({ arr: WIKI_GIT.topics, path: WIKI_GIT.path }),
+  ...getSidebar({ arr: WIKI_BOOKS.topics, path: WIKI_BOOKS.path }),
+  ...getSidebar({ arr: WIKI_TECH.topics, path: WIKI_TECH.path }),
+  ...getSidebar({ arr: WIKI_IDE.topics, path: WIKI_IDE.path }),
+  ...getSidebar({ arr: WIKI_UI_KIT.topics, path: WIKI_UI_KIT.path }),
 };

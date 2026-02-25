@@ -1,7 +1,9 @@
-import { ISidebarTopics } from "../../../types";
+import { ISidebarTopics, TThemeTopics } from "../../../types";
 
 const path = "/wiki/learn/js/";
 const title = "JavaScript";
+const theme: TThemeTopics = "js";
+
 const p = path;
 
 const topics: ISidebarTopics[] = [
@@ -95,4 +97,4 @@ const topics: ISidebarTopics[] = [
 - Gulp
 */
 
-export default { path, topics, title };
+export default { topics, path, title, theme };

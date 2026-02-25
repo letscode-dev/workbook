@@ -1,7 +1,9 @@
-import { ISidebarTopics } from "../../../types";
+import { ISidebarTopics, TThemeTopics } from "../../../types";
 
 const path = "/wiki/system/ui-kit/";
 const title = "Ui-Kit";
+const theme: TThemeTopics = null;
+
 const p = path;
 
 const topics: ISidebarTopics[] = [
@@ -24,4 +26,4 @@ const topics: ISidebarTopics[] = [
   },
 ];
 
-export default { path, topics, title };
+export default { topics, path, title, theme };

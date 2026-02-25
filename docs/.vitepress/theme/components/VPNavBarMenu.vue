@@ -9,18 +9,26 @@ import { VPLink } from "vitepress/theme";
 const { theme: themeConfig, page } = useData();
 const nav = themeConfig.value?.nav ?? [];
 
-type NavGroup = { text: string; items: { text: string; link: string; theme?: string }[] };
-const groups = nav.filter((item): item is NavGroup => "items" in item && Array.isArray(item.items));
+type NavGroup = {
+  text: string;
+  items: { text: string; link: string; theme?: string }[];
+};
+const groups = nav.filter(
+  (item): item is NavGroup => "items" in item && Array.isArray(item.items),
+);
 
 function normalizePath(p: string): string {
-  return decodeURI(p)
-    .replace(/[?#].*$/, "")
-    .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
-    .replace(/\/$/, "") || "/";
+  return (
+    decodeURI(p)
+      .replace(/[?#].*$/, "")
+      .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
+      .replace(/\/$/, "") || "/"
+  );
 }
 
 function isActive(relativePath: string, link: string): boolean {
-  const current = "/" + relativePath.replace(/\.md$/, "").replace(/\/index$/, "");
+  const current =
+    "/" + relativePath.replace(/\.md$/, "").replace(/\/index$/, "");
   const norm = normalizePath(link);
   return current === norm || (norm !== "/" && current.startsWith(norm + "/"));
 }
@@ -32,7 +40,9 @@ function isActive(relativePath: string, link: string): boolean {
     aria-labelledby="main-nav-aria-label"
     class="VPNavBarMenu custom-nav"
   >
-    <span id="main-nav-aria-label" class="visually-hidden">Main Navigation</span>
+    <span id="main-nav-aria-label" class="visually-hidden"
+      >Main Navigation</span
+    >
     <fieldset v-for="(group, gKey) in groups" :key="gKey" class="fieldset">
       <legend class="legend">{{ group.text }}</legend>
       <div class="link-wrapper">
@@ -42,7 +52,11 @@ function isActive(relativePath: string, link: string): boolean {
           :href="item.link"
           :class="['link', item.theme || 'theme-default']"
         >
-          <span :class="{ 'route-link-active': isActive(page.relativePath, item.link) }">
+          <span
+            :class="{
+              'route-link-active': isActive(page.relativePath, item.link),
+            }"
+          >
             {{ item.text }}
           </span>
         </VPLink>

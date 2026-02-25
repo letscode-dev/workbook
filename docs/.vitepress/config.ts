@@ -92,7 +92,7 @@ export default defineConfig({
       items: group.children.map((c) => ({
         text: c.text,
         link: c.link,
-        theme: c.theme ?? "theme-default",
+        theme: c.theme,
       })),
     })),
     sidebar: SIDEBAR,

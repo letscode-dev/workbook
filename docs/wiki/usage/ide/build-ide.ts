@@ -1,7 +1,9 @@
-import { ISidebarTopics } from "../../../types";
+import { ISidebarTopics, TThemeTopics } from "../../../types";
 
 const path = "/wiki/usage/ide/";
 const title = "IDE";
+const theme: TThemeTopics = null;
+
 const p = path;
 
 const topics: ISidebarTopics[] = [
@@ -19,4 +21,4 @@ const topics: ISidebarTopics[] = [
   },
 ];
 
-export default { path, topics, title };
+export default { topics, path, title, theme };

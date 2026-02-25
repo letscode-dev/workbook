@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+// FIXME: Скорее всего дубль VPNavbar.vue
+
 /**
  * Аналог docs/.vuepress/app-custom/layouts/VPNavbar.vue:
  * навбар с fieldset/legend и theme pills.
@@ -52,9 +54,8 @@ function isActive(relativePath: string, link: string): boolean {
             :key="key"
             :href="item.link"
             :class="[
-              'link',
               'theme-default',
-              item.theme || 'theme-default',
+              item.theme && 'theme-' + item.theme,
               { 'route-link-active': isActive(page.relativePath, item.link) },
             ]"
           >

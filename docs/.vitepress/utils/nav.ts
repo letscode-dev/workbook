@@ -1,31 +1,15 @@
-import type { IGetNavReturn } from "../../types";
+import type { IGetNavReturn, TThemeTopics } from "../../types";
 
-type TTheme =
-  | "default"
-  | "react"
-  | "node"
-  | "js"
-  | "vue"
-  | "html"
-  | "primary"
-  | "secondary"
-  | "accent"
-  | "actual"
-  | "tech"
-  | "theory";
-
-export function getNav({
-  title,
-  link,
-  theme = "default",
-}: {
+interface IGetNav {
   title: string;
   link: string;
-  theme?: TTheme;
-}): IGetNavReturn {
+  theme: TThemeTopics;
+}
+
+export function getNav({ title, link, theme }: IGetNav): IGetNavReturn {
   return {
     text: title,
     link,
-    theme: "theme-" + theme,
+    theme,
   };
 }

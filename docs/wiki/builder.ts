@@ -18,32 +18,60 @@ export const NAV: IHeaderMenuNav[] = [
   {
     text: "Usage",
     children: [
-      getNav({ title: WIKI_TECH.title, link: WIKI_TECH.path, theme: "js" }),
-      getNav({ title: WIKI_IDE.title, link: WIKI_IDE.path, theme: "node" }),
+      getNav({
+        title: WIKI_TECH.title,
+        link: WIKI_TECH.path,
+        theme: WIKI_TECH.theme,
+      }),
+      getNav({
+        title: WIKI_IDE.title,
+        link: WIKI_IDE.path,
+        theme: WIKI_IDE.theme,
+      }),
     ],
   },
   {
     text: "Обучение",
     children: [
-      getNav({ title: WIKI_GIT.title, link: WIKI_GIT.path }),
-      getNav({ title: WIKI_JS.title, link: WIKI_JS.path }),
+      getNav({
+        title: WIKI_GIT.title,
+        link: WIKI_GIT.path,
+        theme: WIKI_GIT.theme,
+      }),
+      getNav({
+        title: WIKI_JS.title,
+        link: WIKI_JS.path,
+        theme: WIKI_JS.theme,
+      }),
     ],
   },
   {
     text: "Ссылки",
-    children: [getNav({ title: WIKI_BOOKS.title, link: WIKI_BOOKS.path })],
+    children: [
+      getNav({
+        title: WIKI_BOOKS.title,
+        link: WIKI_BOOKS.path,
+        theme: WIKI_BOOKS.theme,
+      }),
+    ],
   },
   {
     text: "System",
-    children: [getNav({ title: WIKI_UI_KIT.title, link: WIKI_UI_KIT.path })],
+    children: [
+      getNav({
+        title: WIKI_UI_KIT.title,
+        link: WIKI_UI_KIT.path,
+        theme: WIKI_UI_KIT.theme,
+      }),
+    ],
   },
 ];
 
 export const SIDEBAR = {
-  ...getSidebar({ arr: WIKI_JS.topics, path: WIKI_JS.path }),
-  ...getSidebar({ arr: WIKI_GIT.topics, path: WIKI_GIT.path }),
-  ...getSidebar({ arr: WIKI_BOOKS.topics, path: WIKI_BOOKS.path }),
-  ...getSidebar({ arr: WIKI_TECH.topics, path: WIKI_TECH.path }),
-  ...getSidebar({ arr: WIKI_IDE.topics, path: WIKI_IDE.path }),
-  ...getSidebar({ arr: WIKI_UI_KIT.topics, path: WIKI_UI_KIT.path }),
+  ...getSidebar({ topics: WIKI_JS.topics, path: WIKI_JS.path }),
+  ...getSidebar({ topics: WIKI_GIT.topics, path: WIKI_GIT.path }),
+  ...getSidebar({ topics: WIKI_BOOKS.topics, path: WIKI_BOOKS.path }),
+  ...getSidebar({ topics: WIKI_TECH.topics, path: WIKI_TECH.path }),
+  ...getSidebar({ topics: WIKI_IDE.topics, path: WIKI_IDE.path }),
+  ...getSidebar({ topics: WIKI_UI_KIT.topics, path: WIKI_UI_KIT.path }),
 };

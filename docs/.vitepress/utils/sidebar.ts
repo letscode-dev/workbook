@@ -17,6 +17,9 @@ interface IGetSidebar {
   path: string;
   num?: number;
 }
+
+// FIXME: Перебрать "topics" и к каждому добавить "path"
+// Удалить из файлов build: [p + "basic/ecmascript", "Стандарт ECMAScript"]
 export function getSidebar({
   topics,
   path,

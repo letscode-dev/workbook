@@ -2,13 +2,13 @@ import { getSidebar } from "../.vitepress/utils/sidebar";
 import { getNav } from "../.vitepress/utils/nav";
 import type { IHeaderMenuNav } from "../types";
 
-import WIKI_JS from "./learn/js/learn-js";
-import WIKI_GIT from "./learn/git/learn-git";
-import WIKI_BOOKS from "./references/books/references-books";
-import WIKI_TECH from "./usage/tech/usage-tech";
-import WIKI_IDE from "./usage/ide/usage-ide";
+import WIKI_JS from "./learn/js/build-js";
+import WIKI_GIT from "./learn/git/build-git";
+import WIKI_BOOKS from "./references/books/build-books";
+import WIKI_TECH from "./usage/tech/build-tech";
+import WIKI_IDE from "./usage/ide/build-ide";
 
-import WIKI_UI_KIT from "./uikit/ui/uikit-ui";
+import WIKI_UI_KIT from "./system/ui-kit/build-ui-kit";
 
 // FIXME:
 // - В getNav и getSidebar сразу передавать объект
@@ -34,7 +34,7 @@ export const NAV: IHeaderMenuNav[] = [
     children: [getNav({ title: WIKI_BOOKS.title, link: WIKI_BOOKS.path })],
   },
   {
-    text: "Utils",
+    text: "System",
     children: [getNav({ title: WIKI_UI_KIT.title, link: WIKI_UI_KIT.path })],
   },
 ];

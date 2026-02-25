@@ -4,4 +4,6 @@
  */
 
 /** Включить кастомный layout (docs/.vitepress/theme/Layout.vue): сайдбар слева, свой навбар. false — стандартный вид VitePress (навбар и меню по умолчанию). */
+
+// FIXME: Изменить на FF. Объект с настройкой проектов
 export const useCustomLayout = false;

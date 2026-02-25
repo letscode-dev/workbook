@@ -1,6 +1,6 @@
 import { ISidebarTopics } from "../../../types";
 
-const path = "/wiki/uikit/ui/";
+const path = "/wiki/system/ui-kit/";
 const title = "Ui-Kit";
 const p = path;
 

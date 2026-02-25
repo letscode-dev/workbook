@@ -2,7 +2,7 @@ import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
 
 const path = "/wiki/learn/git/";
 const title = "Git";
-const theme: TThemeTopics = "node";
+const theme: TThemeTopics = null;
 
 const topics: ISidebarTopics[] = [
   {

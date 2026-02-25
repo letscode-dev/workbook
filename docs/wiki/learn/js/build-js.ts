@@ -2,7 +2,7 @@ import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
 
 const path = "/wiki/learn/js/";
 const title = "JavaScript";
-const theme: TThemeTopics = "js";
+const theme: TThemeTopics = null;
 
 const topics: ISidebarTopics[] = [
   {

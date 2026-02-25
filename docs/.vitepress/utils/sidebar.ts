@@ -1,21 +1,40 @@
 import type { DefaultTheme } from "vitepress";
-import type { IBuildTopics, TSidebarTopicsItem } from "../../types";
+import type {
+  IBuildTopics,
+  TSidebarTopicsItem,
+  TSidebarTopicsItemStatus,
+} from "../../types";
 
-function getSidebarChildren(
+const checkIconColor = (
+  status: TSidebarTopicsItemStatus | undefined,
+): string => {
+  switch (status) {
+    case "done":
+      return "blue";
+    case "check":
+      return "red";
+    default:
+      return "inherit";
+  }
+};
+
+const getSidebarChildren = (
   children: TSidebarTopicsItem[],
   fullPath: string,
-): DefaultTheme.SidebarItem[] {
-  return children.map(([path, title]) => {
+): DefaultTheme.SidebarItem[] => {
+  return children.map(([path, title, status]) => {
+    const iconColor = checkIconColor(status);
+
     return {
-      text: `• ${title}`,
+      text: `<span style="color: ${iconColor}">•</span> ${title}`,
       link: fullPath + path,
     };
   });
-}
+};
 
-export function getSidebar(
+export const getSidebar = (
   data: IBuildTopics,
-): Record<string, DefaultTheme.SidebarItem[]> {
+): Record<string, DefaultTheme.SidebarItem[]> => {
   const result: DefaultTheme.SidebarItem[] = data.topics.map(
     ({ title, children }) => ({
       text: title,
@@ -24,4 +43,4 @@ export function getSidebar(
   );
 
   return { [data.path]: result };
-}
+};

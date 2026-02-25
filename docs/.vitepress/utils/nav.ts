@@ -1,6 +1,6 @@
 import type { IBuildTopics, IHeaderMenuNavChildren } from "../../types";
 
-export function getNav(data: IBuildTopics[]): IHeaderMenuNavChildren[] {
+export const getNav = (data: IBuildTopics[]): IHeaderMenuNavChildren[] => {
   const result = data.map((dataItem) => {
     return {
       text: dataItem.title,
@@ -10,4 +10,4 @@ export function getNav(data: IBuildTopics[]): IHeaderMenuNavChildren[] {
   });
 
   return result;
-}
+};

@@ -1,8 +1,0 @@
-import{_ as e,C as o,o as l,c as p,aw as i,E as r,w as t,a}from"./chunks/framework.BtePCZ7A.js";const A=JSON.parse('{"title":"v-two","description":"","frontmatter":{},"headers":[],"relativePath":"wiki/system/ui-kit/components/v-two.md","filePath":"wiki/system/ui-kit/components/v-two.md"}'),c={name:"wiki/system/ui-kit/components/v-two.md"};function d(v,s,m,_,w,u){const n=o("v-two",!0);return l(),p("div",null,[s[2]||(s[2]=i(`<h1 id="v-two" tabindex="-1">v-two <a class="header-anchor" href="#v-two" aria-label="Permalink to &quot;v-two&quot;">​</a></h1><div class="language-vue"><button title="Copy Code" class="copy"></button><span class="lang">vue</span><pre class="shiki one-light vp-code" tabindex="0"><code><span class="line"><span style="color:#383A42;">&lt;</span><span style="color:#E45649;">v-two</span><span style="color:#383A42;">&gt;</span></span>
-<span class="line"><span style="color:#383A42;">&lt;template v-slot:first&gt;</span></span>
-<span class="line"><span style="color:#383A42;">1️⃣</span></span>
-<span class="line"><span style="color:#383A42;">&lt;/template&gt;</span></span>
-<span class="line"><span style="color:#383A42;">&lt;template v-slot:last&gt;</span></span>
-<span class="line"><span style="color:#383A42;">2️⃣</span></span>
-<span class="line"><span style="color:#383A42;">&lt;/template&gt;</span></span>
-<span class="line"><span style="color:#383A42;">&lt;/</span><span style="color:#E45649;">v-two</span><span style="color:#383A42;">&gt;</span></span></code></pre></div>`,2)),r(n,null,{first:t(()=>[...s[0]||(s[0]=[a(" 1️⃣ ",-1)])]),last:t(()=>[...s[1]||(s[1]=[a(" 2️⃣ ",-1)])]),_:1})])}const f=e(c,[["render",d]]);export{A as __pageData,f as default};

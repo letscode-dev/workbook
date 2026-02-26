@@ -100,8 +100,7 @@ const containerClass = computed(() => [
       <div class="vp-content">
         <VPNavbar v-if="shouldShowNavbar" />
         <VPLocalNav :open="isSidebarOpen" @open-menu="openSidebar" />
-        <Transition name="fade-slide-y" mode="out-in">
-          <VPContent :key="route.path">
+        <VPContent :key="route.path">
             <template #page-top><slot name="page-top" /></template>
             <template #page-bottom><slot name="page-bottom" /></template>
             <template #not-found><slot name="not-found" /></template>
@@ -152,7 +151,6 @@ const containerClass = computed(() => [
             /></template>
             <template #aside-bottom><slot name="aside-bottom" /></template>
           </VPContent>
-        </Transition>
       </div>
       <VPFooter />
     </div>
@@ -215,15 +213,5 @@ const containerClass = computed(() => [
   display: flex;
   flex-direction: column;
   min-height: 0;
-}
-
-.fade-slide-y-enter-active,
-.fade-slide-y-leave-active {
-  transition: all 0.2s ease;
-}
-.fade-slide-y-enter-from,
-.fade-slide-y-leave-to {
-  opacity: 0;
-  transform: translateY(10px);
 }
 </style>

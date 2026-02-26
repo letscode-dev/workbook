@@ -1,14 +1,13 @@
 import { defineConfig } from "vitepress";
 import { NAV, SIDEBAR } from "../wiki/builder";
-import { FF_CUSTOM_LAYOUT } from "../app-config";
+import AppConfig from "../app-config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { IThemeConfigNav } from "../types";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// FIXME: Разные значения для разных проектов
-const BASE = "/workbook/";
+const BASE = AppConfig.BasePath;
 
 const customNavComposablePath = path.resolve(
   __dirname,
@@ -19,12 +18,11 @@ const customNavComposablePath = path.resolve(
 
 export default defineConfig({
   base: BASE,
-  // FIXME: Разные значения для разных проектов
-  title: "Let's Code Workbook",
-  description: "Методичка и справочные материалы",
+  title: AppConfig.Title,
+  description: AppConfig.Description,
   head: [
     ["link", { rel: "icon", href: BASE + "favicon.svg" }],
-    ["meta", { name: "theme-color", content: "#3eaf7c" }],
+    ["meta", { name: "theme-color", content: AppConfig.ThemeColor }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
     [
       "meta",
@@ -53,7 +51,7 @@ export default defineConfig({
       noExternal: ["mark.js"],
     },
     plugins: [
-      ...(FF_CUSTOM_LAYOUT
+      ...(AppConfig.CustomLayout
         ? [
             {
               name: "resolve-custom-nav-composable",

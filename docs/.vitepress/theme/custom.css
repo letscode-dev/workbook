@@ -123,12 +123,17 @@
 
 /* Убираем нижний отступ 128px у контента */
 .vp-theme-container--desktop .content {
-  padding: 20px;
+  padding: 20px 40px;
 }
 
 .vp-theme-container--desktop .content-container {
   width: 100%;
   max-width: 100% !important;
+}
+
+/* VPDoc: уменьшаем отступы на десктопе */
+.vp-theme-container--desktop .VPDoc.has-sidebar.has-aside {
+  padding: 10px;
 }
 
 /* Скрываем виджет «On this page» (outline) на десктопе */

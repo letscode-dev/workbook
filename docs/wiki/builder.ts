@@ -10,8 +10,14 @@ import {
   SIDEBAR as LetsCodeSidebar,
 } from "./lets-code/builder";
 
-// export const NAV: IHeaderMenuNav[] = DevCommitNav;
-// export const SIDEBAR = DevCommitSidebar;
+const navAndSidebar = (() => {
+  switch (AppConfig.Name) {
+    case "DevCommit":
+      return { NAV: DevCommitNav, SIDEBAR: DevCommitSidebar };
+    case "LetsCode":
+      return { NAV: LetsCodeNav, SIDEBAR: LetsCodeSidebar };
+  }
+})();
 
-export const NAV: IHeaderMenuNav[] = LetsCodeNav;
-export const SIDEBAR = LetsCodeSidebar;
+export const NAV: IHeaderMenuNav[] = navAndSidebar.NAV;
+export const SIDEBAR = navAndSidebar.SIDEBAR;

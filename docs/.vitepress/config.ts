@@ -1,11 +1,13 @@
 import { defineConfig } from "vitepress";
 import { NAV, SIDEBAR } from "../wiki/builder";
-import { FF_CUSTOM_LAYOUT } from "../feature-flags";
+import { FF_CUSTOM_LAYOUT } from "../app-config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { IThemeConfigNav } from "../types";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+// FIXME: Разные значения для разных проектов
 const BASE = "/workbook/";
 
 const customNavComposablePath = path.resolve(

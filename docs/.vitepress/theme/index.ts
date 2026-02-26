@@ -1,6 +1,6 @@
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
-import { FF_CUSTOM_LAYOUT } from "../../feature-flags";
+import { FF_CUSTOM_LAYOUT } from "../../app-config";
 import Layout from "./Layout.vue";
 import VDetails from "../components/v-details.vue";
 import VIframe from "../components/v-iframe.vue";

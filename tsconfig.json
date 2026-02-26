@@ -19,6 +19,6 @@
   "include": [
     "docs/**/*.ts",
     "docs/**/*.vue"
-, "docs/feature-flags.ts"  ],
+, "docs/app-config.ts"  ],
   "exclude": ["node_modules", "docs/.vitepress/dist", "docs/.vitepress/cache"]
 }

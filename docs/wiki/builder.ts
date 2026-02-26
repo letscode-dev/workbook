@@ -2,38 +2,45 @@ import { getSidebar } from "../.vitepress/utils/sidebar";
 import { getNav } from "../.vitepress/utils/nav";
 import type { IHeaderMenuNav } from "../types";
 
+import AppConfig from "../app-config";
+
 import wikiJs from "./learn/js/build-js";
 import wikiGit from "./learn/git/build-git";
 import wikiBooks from "./references/books/build-books";
 import wikiTech from "./usage/tech/build-tech";
 import wikiIde from "./usage/ide/build-ide";
 
-import wikiUI_KIT from "./system/ui-kit/build-ui-kit";
+import wikiUiKit from "./system/ui-kit/build-ui-kit";
 
-export const NAV: IHeaderMenuNav[] = [
-  {
-    text: "Usage",
-    children: getNav([wikiTech, wikiIde]),
+// FIXME: Добавить типы для DevCommit и LetsCode из app-config
+const NavData = {
+  DevCommit: {
+    nav: [
+      {
+        text: "System",
+        children: getNav([wikiUiKit]),
+      },
+    ],
+    sidebar: getSidebar([wikiUiKit]),
   },
-  {
-    text: "Обучение",
-    children: getNav([wikiGit, wikiJs]),
+  LetsCode: {
+    nav: [
+      {
+        text: "Usage",
+        children: getNav([wikiTech, wikiIde]),
+      },
+      {
+        text: "Обучение",
+        children: getNav([wikiGit, wikiJs]),
+      },
+      {
+        text: "Ссылки",
+        children: getNav([wikiBooks]),
+      },
+    ],
+    sidebar: getSidebar([wikiJs, wikiGit, wikiBooks, wikiTech, wikiIde]),
   },
-  {
-    text: "Ссылки",
-    children: getNav([wikiBooks]),
-  },
-  {
-    text: "System",
-    children: getNav([wikiUI_KIT]),
-  },
-];
+};
 
-export const SIDEBAR = getSidebar([
-  wikiJs,
-  wikiGit,
-  wikiBooks,
-  wikiTech,
-  wikiIde,
-  wikiUI_KIT,
-]);
+export const NAV: IHeaderMenuNav[] = NavData[AppConfig.Name].nav;
+export const SIDEBAR = NavData[AppConfig.Name].sidebar;

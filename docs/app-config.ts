@@ -1,4 +1,5 @@
 interface IProject {
+  Name: "DevCommit" | "LetsCode";
   CustomLayout: boolean;
   BasePath: string;
   Title: string;
@@ -13,6 +14,7 @@ interface IProjects {
 
 const Projects: IProjects = {
   DevCommit: {
+    Name: "DevCommit",
     CustomLayout: true,
     BasePath: "/",
     Title: "DevCommit",
@@ -20,6 +22,7 @@ const Projects: IProjects = {
     ThemeColor: "#3c31b5",
   },
   LetsCode: {
+    Name: "LetsCode",
     CustomLayout: false,
     BasePath: "/workbook/",
     Title: "Let's Code Workbook",
@@ -28,6 +31,6 @@ const Projects: IProjects = {
   },
 };
 
-export default Projects.LetsCode;
+export default Projects.DevCommit;
 
 // import AppConfig from "../app-config";

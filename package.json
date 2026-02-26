@@ -4,13 +4,12 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
     "typecheck": "tsc --noEmit",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs",
+    "preview": "vitepress preview docs",
     "build-gh-pages": "gh-pages -d docs/.vitepress/dist",
     "commit": "git add . && git commit -m \"Bash Script Commit\" && git push origin head",
-    "deploy": "npm run docs:build && npm run build-gh-pages && npm run commit"
+    "deploy": "npm run build && npm run build-gh-pages && npm run commit"
   },
   "devDependencies": {
     "@types/node": "^22.10.1",

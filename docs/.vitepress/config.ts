@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 import { NAV, SIDEBAR } from "../wiki/builder";
-import AppConfig from "../app-config";
+import AppConfig, { Projects } from "../app-config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { IThemeConfigNav } from "../types";
@@ -30,6 +30,10 @@ export default defineConfig({
     ],
   ],
   srcDir: ".",
+  srcExclude: Object.values(Projects)
+    .map((p) => p.WikiDir)
+    .filter((d) => d !== AppConfig.WikiDir)
+    .map((d) => `wiki/${d}/**`),
   outDir: ".vitepress/dist",
   cacheDir: ".vitepress/cache",
   ignoreDeadLinks: true,

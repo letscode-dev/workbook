@@ -1,5 +1,6 @@
 interface IProject {
   Name: "DevCommit" | "LetsCode";
+  WikiDir: "dev-commit" | "lets-code";
   CustomLayout: boolean;
   BasePath: string;
   Title: string;
@@ -12,9 +13,10 @@ interface IProjects {
   LetsCode: IProject;
 }
 
-const Projects: IProjects = {
+export const Projects: IProjects = {
   DevCommit: {
     Name: "DevCommit",
+    WikiDir: "dev-commit",
     CustomLayout: true,
     BasePath: "/",
     Title: "DevCommit",
@@ -23,6 +25,7 @@ const Projects: IProjects = {
   },
   LetsCode: {
     Name: "LetsCode",
+    WikiDir: "lets-code",
     CustomLayout: false,
     BasePath: "/workbook/",
     Title: "Let's Code Workbook",
@@ -31,6 +34,4 @@ const Projects: IProjects = {
   },
 };
 
-export default Projects.DevCommit;
-
-// import AppConfig from "../app-config";
+export default Projects.LetsCode;

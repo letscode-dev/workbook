@@ -28,6 +28,6 @@ const Projects: IProjects = {
   },
 };
 
-export default Projects.DevCommit as IProject;
+export default Projects.LetsCode;
 
 // import AppConfig from "../app-config";

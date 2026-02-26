@@ -32,7 +32,7 @@ const getSidebarChildren = (
   });
 };
 
-export const getSidebar = (
+const buildSidebarFor = (
   data: IBuildTopics,
 ): Record<string, DefaultTheme.SidebarItem[]> => {
   const result: DefaultTheme.SidebarItem[] = data.topics.map(
@@ -41,6 +41,13 @@ export const getSidebar = (
       items: getSidebarChildren(children, data.path),
     }),
   );
-
   return { [data.path]: result };
 };
+
+export const getSidebar = (
+  items: IBuildTopics[],
+): Record<string, DefaultTheme.SidebarItem[]> =>
+  items.reduce(
+    (acc, data) => ({ ...acc, ...buildSidebarFor(data) }),
+    {} as Record<string, DefaultTheme.SidebarItem[]>,
+  );

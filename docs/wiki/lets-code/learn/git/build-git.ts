@@ -1,6 +1,7 @@
-import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
+import { IBuildTopics, TThemeTopics, ISidebarTopics } from "docs/types";
+import { rootPath } from "../../constants";
 
-const path = "/wiki/learn/git/";
+const path = rootPath + "learn/git/";
 const title = "Git";
 const theme: TThemeTopics = null;
 

@@ -1,6 +1,7 @@
-import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
+import { IBuildTopics, TThemeTopics, ISidebarTopics } from "docs/types";
+import { rootPath } from "../../constants";
 
-const path = "/wiki/system/ui-kit/";
+const path = rootPath + "system/ui-kit/";
 const title = "Ui-Kit";
 const theme: TThemeTopics = null;
 

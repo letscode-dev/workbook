@@ -1,6 +1,7 @@
-import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
+import { IBuildTopics, TThemeTopics, ISidebarTopics } from "docs/types";
+import { rootPath } from "../../constants";
 
-const path = "/wiki/usage/tech/";
+const path = rootPath + "usage/tech/";
 const title = "Технологии";
 const theme: TThemeTopics = null;
 

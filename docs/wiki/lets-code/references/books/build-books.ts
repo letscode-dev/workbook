@@ -1,6 +1,7 @@
-import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
+import { IBuildTopics, TThemeTopics, ISidebarTopics } from "docs/types";
+import { rootPath } from "../../constants";
 
-const path = "/wiki/references/books/";
+const path = rootPath + "references/books/";
 const title = "Книги";
 const theme: TThemeTopics = null;
 

@@ -1,6 +1,7 @@
-import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
+import { IBuildTopics, TThemeTopics, ISidebarTopics } from "docs/types";
+import { rootPath } from "../../constants";
 
-const path = "/wiki/usage/ide/";
+const path = rootPath + "usage/ide/";
 const title = "IDE";
 const theme: TThemeTopics = null;
 

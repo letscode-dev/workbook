@@ -1,6 +1,7 @@
-import { IBuildTopics, ISidebarTopics, TThemeTopics } from "../../../types";
+import { IBuildTopics, TThemeTopics, ISidebarTopics } from "docs/types";
+import { rootPath } from "../../constants";
 
-const path = "/wiki/learn/js/";
+const path = rootPath + "learn/js/";
 const title = "JavaScript";
 const theme: TThemeTopics = null;
 

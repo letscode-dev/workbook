@@ -3,7 +3,7 @@ import { NAV, SIDEBAR } from "../wiki/builder";
 import AppConfig, { Projects } from "../app-config";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import type { IThemeConfigNav } from "../types";
+import type { IHeaderMenuNavChildren, IThemeConfigNav } from "../types";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -81,7 +81,7 @@ export default defineConfig({
     logo: "/logo.png",
     nav: NAV.map((group) => ({
       text: group.text,
-      items: group.children.map((c) => ({
+      items: group.children.map((c: IHeaderMenuNavChildren) => ({
         text: c.text,
         link: c.link,
         theme: c.theme,

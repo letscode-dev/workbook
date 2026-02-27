@@ -22,16 +22,8 @@ const norm = (p: string) =>
     .replace(/(?:(^|\/)index)?\.(?:md|html)$/, "$1")
     .replace(/\/$/, "") || "/";
 
-/** Как в теме VitePress: при activeMatch — regex по пути, иначе совпадение по link. */
-const isActive = (item: { link: string; activeMatch?: string }) => {
+const isActive = (item: { link: string }) => {
   const current = currentPath();
-  if (item.activeMatch) {
-    try {
-      return new RegExp(item.activeMatch).test(current);
-    } catch {
-      return false;
-    }
-  }
   const n = norm(item.link);
   return current === n || (n !== "/" && current.startsWith(n + "/"));
 };
@@ -44,9 +36,6 @@ const isActive = (item: { link: string; activeMatch?: string }) => {
       aria-labelledby="main-nav-aria-label"
       class="navbar"
     >
-      <span id="main-nav-aria-label" class="visually-hidden"
-        >Main Navigation</span
-      >
       <fieldset v-for="(group, gKey) in groups" :key="gKey" class="fieldset">
         <legend class="legend">{{ group.text }}</legend>
         <div class="link-wrapper">

@@ -2,8 +2,6 @@ export interface IHeaderMenuNavChildren {
   text: string;
   link: string;
   theme: TThemeTopics;
-  // FIXME: От Cursor: Regex string for active state (see VitePress nav activeMatch)
-  activeMatch?: string;
 }
 
 export type TSidebarTopicsItemStatus = "done" | "check";

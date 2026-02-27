@@ -68,14 +68,15 @@ const isActive = (item: { link: string }) => {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 5px;
   width: 100%;
 }
 
 .fieldset {
   margin: 0;
   padding: 10px;
-  border: 1px solid #dcdcdc;
+  padding-top: 0;
+  border: 1px solid #e8e8e8;
   border-radius: 5px;
   background-color: #fff;
 }

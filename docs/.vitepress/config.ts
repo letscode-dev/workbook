@@ -34,7 +34,7 @@ export default defineConfig({
   srcExclude: Object.values(Projects)
     .map((p) => p.WikiDir)
     .filter((d) => d !== AppConfig.WikiDir)
-    .map((d) => `wiki/${d}/**`),
+    .map((d) => `${AppConfig.RootDir}/${d}/**`),
   outDir: ".vitepress/dist",
   cacheDir: ".vitepress/cache",
   ignoreDeadLinks: true,

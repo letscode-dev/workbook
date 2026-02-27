@@ -21,7 +21,7 @@ export const Projects: IProjects = {
     BasePath: "/",
     Title: "DevCommit",
     Description: "Справочник",
-    ThemeColor: "#3c31b5",
+    ThemeColor: "#ff0055",
   },
   LetsCode: {
     Name: "LetsCode",

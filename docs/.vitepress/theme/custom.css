@@ -137,8 +137,11 @@
 }
 
 /* Скрываем виджет «On this page» (outline) на десктопе */
-.vp-theme-container--desktop .vp-content .aside {
-  display: none;
+.vp-theme-container--desktop .vp-content .aside,
+.vp-theme-container--desktop .aside,
+.vp-theme-container--desktop .VPDocAside,
+.vp-theme-container--desktop .VPLocalNav.has-sidebar {
+  display: none !important;
 }
 
 /* Мобильная версия до 960px включительно: переопределяем брейкпоинт темы (768px → 960px) */

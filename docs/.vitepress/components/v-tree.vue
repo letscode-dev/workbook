@@ -13,6 +13,8 @@
 </template>
 
 <script setup lang="ts">
+// FIXME: Проверить
+
 import { computed } from "vue";
 
 export interface DirTreeNode {

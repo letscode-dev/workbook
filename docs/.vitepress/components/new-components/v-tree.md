@@ -1,6 +1,6 @@
 ```ts
 Vue.component("v-tree", {
-  template: `<pre><code class="bash v-tree"><slot></slot></code></pre>`,
+  template: `<pre><code class="bash v-tree"><slot>Default</slot></code></pre>`,
 });
 ```
 

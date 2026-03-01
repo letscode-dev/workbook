@@ -4,21 +4,21 @@
 
 ```vue
 <v-two>
-  <template v-slot:first>
+  <template #first>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry
   </template>
 
-  <template v-slot:last>
+  <template #last>
     It has survived not only five centuries, but also the leap into electronic
   </template>
 </v-two>
 ```
 
 <v-two>
-<template v-slot:first>
+<template #first>
   Lorem Ipsum is simply dummy text of the printing and typesetting industry
 </template>
-<template v-slot:last>
+<template #last>
   It has survived not only five centuries, but also the leap into electronic
 </template>
 </v-two>
@@ -31,7 +31,7 @@
 
 ````vue
 <v-two>
-  <template v-slot:first>
+  <template #first>
 
   ```js
   console.log("Hello");
@@ -39,7 +39,7 @@
 
   </template>
 
-  <template v-slot:last>
+  <template #last>
 
   - Элемент 1
   - Элемент 2
@@ -49,14 +49,14 @@
 ````
 
 <v-two>
-<template v-slot:first>
+<template #first>
 
 ```js
 console.log("Hello");
 ```
 
 </template>
-<template v-slot:last>
+<template #last>
 
 - Элемент 1
 - Элемент 2
@@ -75,10 +75,10 @@ console.log("Hello");
 ```
 
 <v-two fix>
-<template v-slot:first>
+<template #first>
   Lorem Ipsum is simply dummy text of the printing and typesetting industry
 </template>
-<template v-slot:last>
+<template #last>
   It has survived not only five centuries, but also the leap into electronic
 </template>
 </v-two>
@@ -94,14 +94,14 @@ console.log("Hello");
 ```
 
 <v-two compare :title="['Vue 3', 'Vue 2']">
-<template v-slot:first>
+<template #first>
 
 ```js
 console.log("Hello");
 ```
 
 </template>
-<template v-slot:last>
+<template #last>
 
 ```js
 console.log("Hello");
@@ -117,14 +117,14 @@ console.log("Hello");
 ```
 
 <v-two :title="['Vue 3', 'Vue 2']">
-<template v-slot:first>
+<template #first>
 
 ```js
 console.log("Hello");
 ```
 
 </template>
-<template v-slot:last>
+<template #last>
 
 ```js
 console.log("Hello");

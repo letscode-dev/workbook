@@ -4,7 +4,7 @@ Vue.component("v-path", {
 		<div class="v-path-container">
 			<span class="v-path-divider"></span>
 			<span class="v-path-wrapper">
-				<slot></slot>
+				<slot>Default</slot>
 			</span>
 		</div>
 	`,

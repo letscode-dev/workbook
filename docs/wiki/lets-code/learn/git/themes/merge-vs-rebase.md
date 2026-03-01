@@ -74,10 +74,10 @@
 #### Исходные даннные: порядок коммитов
 
 <v-two>
-<template v-slot:first>
+<template #first>
 <img src="../@img/commits-order.jpg" style="width: 250px" />
 </template>
-<template v-slot:last>
+<template #last>
 
 1. `master-0` - master
 2. `feature-1` - feature
@@ -89,6 +89,7 @@
 </v-two>
 
 ### История коммитов для Rebase и Merge
+
 - `merge` - (слияние) - хронологический порядок
 - `rebase` - (перемещение) - у новых коммитов изменится хеш и они будут поверх старых
 

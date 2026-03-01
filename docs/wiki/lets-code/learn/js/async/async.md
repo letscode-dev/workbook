@@ -1,12 +1,14 @@
 # Async Function (ES2017)
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 ### Объявление
+
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 <!-- .............. START ......................... -->
 <v-two>
-<template v-slot:first>
+<template #first>
 
 ```js:no-line-numbers
 // Стрелочная
@@ -14,23 +16,24 @@ const foo = async () => {
     const a = await AsyncFunction();
 };
 ```
+
 </template>
-<template v-slot:last>
+<template #last>
 
 ```js:no-line-numbers
 // Обычная
 async function foo() {
-    const a = await AsyncFunction();  
+    const a = await AsyncFunction();
 }
 ```
+
 </template>
 </v-two>
 <!-- ............... END .......................... -->
 
-
 <!-- .............. START ......................... -->
 <v-two>
-<template v-slot:first>
+<template #first>
 
 ```js:no-line-numbers
 // Стрелочная
@@ -38,8 +41,9 @@ async function foo() {
     const a = await AsyncFunction();
 })()
 ```
+
 </template>
-<template v-slot:last>
+<template #last>
 
 ```js:no-line-numbers
 // Обычная
@@ -47,23 +51,27 @@ async function foo() {
     const a = await AsyncFunction();
 })();
 ```
+
 </template>
 </v-two>
 <!-- ............... END .......................... -->
 
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+### Описание
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
-### Описание
-<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 - `Async Function` - асинхронная функция (`Promise` + `Generator`)
 - Асинхронная функция возвращает <u>Promise</u>, для получения значения используется then
 - await дожидается выполнения <u>Promise</u>, вытаскивает значение и возвращает его
 - await можно использовать только внутри асинхронной функции
 - await необязательно ставить перед вызовом асинхронной фунцкии. это может быть любая функция, возвращающая <u>Promise</u>
 
-
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 ### Примеры
+
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 
 ```js:no-line-numbers
@@ -80,7 +88,7 @@ getResource('https://swapi.co/api/people/1/')
 ```js:no-line-numbers
 // Асинхронная функция
 async function getUser(id) {
-    return { id:1 };   
+    return { id:1 };
 }
 
 async function main() {
@@ -92,8 +100,11 @@ main();
 ```
 
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 ### Использование в классах и объектах
+
 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
 ```js:no-line-numbers
 // Свойство объекта
 const obj = {
@@ -120,4 +131,3 @@ class Obj {
     }
 }
 ```
-

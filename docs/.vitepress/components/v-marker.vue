@@ -3,7 +3,7 @@
     <span class="icon" v-if="marker === '+'">✅</span>
     <span class="icon" v-if="marker === '-'">🅾️</span>
     <span class="icon" v-if="marker === '*'">⭐️</span>
-    <slot></slot>
+    <slot>Default</slot>
   </span>
 </template>
 

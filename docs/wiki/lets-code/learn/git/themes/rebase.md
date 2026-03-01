@@ -104,7 +104,7 @@ git rebase -i HEAD~3
 - Задача: загрузить изменения из _master_ в _feature_
 
 <v-two>
-<template v-slot:first>
+<template #first>
 
 ::: tip 0. Подготовка
 Создание ветки _feature_ и добавление коммитов в _master_ и _feature_
@@ -142,7 +142,7 @@ git rebase -i HEAD~3
 - Теперь ветка _feature'_ (копия ветки _feature_) основана на последнем состоянии _master_
 
 </template>
-<template v-slot:last>
+<template #last>
 <img src="../@img/rebase.jpg" style="width: 300px" />
 </template>
 </v-two>

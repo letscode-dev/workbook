@@ -1,6 +1,6 @@
 <template>
   <span :class="['code', theme]">
-    <slot></slot>
+    <slot>Default</slot>
   </span>
 </template>
 

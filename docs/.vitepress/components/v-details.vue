@@ -2,7 +2,7 @@
   <details class="v-details">
     <summary class="v-summary" v-html="title"></summary>
     <div class="v-content">
-      <slot></slot>
+      <slot>Default</slot>
     </div>
   </details>
 </template>

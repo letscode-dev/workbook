@@ -19,6 +19,7 @@ const topics: ISidebarTopics[] = [
       ["components/v-marker", "v-marker"],
       ["components/v-padding", "v-padding"],
       ["components/v-code", "v-code"],
+      ["components/v-badge", "v-badge"],
     ],
   },
   {

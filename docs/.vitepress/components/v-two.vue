@@ -1,22 +1,52 @@
 <template>
   <div class="wrapper">
-    <div class="column" :class="fix ? 'column-fix' : 'column-half'">
+    <div
+      :class="[
+        'column',
+        fix ? 'column-fix' : 'column-half',
+        compare ? 'column-theme-accent' : '',
+      ]"
+    >
+      <div
+        v-if="titleLeft"
+        :class="['title', compare && 'title-accent']"
+        v-text="titleLeft"
+      ></div>
       <slot name="first">User Default1</slot>
     </div>
-    <div class="column" :class="fix ? 'column-grow' : 'column-half'">
+    <div
+      :class="[
+        'column',
+        fix ? 'column-grow' : 'column-half',
+        compare ? 'color-theme-light' : '',
+      ]"
+    >
+      <div
+        v-if="titleRight"
+        :class="['title', compare && 'title-light']"
+        v-text="titleRight"
+      ></div>
       <slot name="last">User Default2</slot>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+
 interface Props {
   fix?: boolean;
+  compare?: boolean;
+  title?: string[];
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   fix: false,
+  compare: false,
 });
+
+const titleLeft = computed(() => props.title?.[0] ?? "");
+const titleRight = computed(() => props.title?.[1] ?? "");
 </script>
 
 <style scoped>
@@ -25,11 +55,12 @@ withDefaults(defineProps<Props>(), {
 
   display: flex;
   margin: 10px 0px;
-  border: var(--border);
+  /* border: var(--border); */
 }
 .column {
   padding: 10px;
   border-right: var(--border);
+  box-shadow: var(--box-shadow);
 }
 .column:last-child {
   border-right: none;
@@ -42,6 +73,17 @@ withDefaults(defineProps<Props>(), {
 }
 .column-fix {
   width: 200px;
+}
+
+.title {
+  padding: 10px;
+  font-weight: bold;
+}
+.title-accent {
+  background-color: rgba(var(--color-sea-green-light), 0.5);
+}
+.title-light {
+  background-color: rgb(var(--color-gray-20));
 }
 
 @media screen and (max-width: 1070px) {

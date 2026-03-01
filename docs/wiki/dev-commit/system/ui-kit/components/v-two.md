@@ -66,17 +66,11 @@ console.log("Hello");
 
 ---
 
-### Fix
+### Props: `fix`
 
 ```vue
 <v-two fix>
-  <template v-slot:first>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry
-  </template>
-
-  <template v-slot:last>
-    It has survived not only five centuries, but also the leap into electronic
-  </template>
+  ...
 </v-two>
 ```
 
@@ -86,5 +80,55 @@ console.log("Hello");
 </template>
 <template v-slot:last>
   It has survived not only five centuries, but also the leap into electronic
+</template>
+</v-two>
+
+---
+
+### Props: `compare` и `title`
+
+```vue
+<v-two compare :title="['Vue 3', 'Vue 2']">
+  ...
+</v-two>
+```
+
+<v-two compare :title="['Vue 3', 'Vue 2']">
+<template v-slot:first>
+
+```js
+console.log("Hello");
+```
+
+</template>
+<template v-slot:last>
+
+```js
+console.log("Hello");
+```
+
+</template>
+</v-two>
+
+```vue
+<v-two :title="['Vue 3', 'Vue 2']">
+  ...
+</v-two>
+```
+
+<v-two :title="['Vue 3', 'Vue 2']">
+<template v-slot:first>
+
+```js
+console.log("Hello");
+```
+
+</template>
+<template v-slot:last>
+
+```js
+console.log("Hello");
+```
+
 </template>
 </v-two>

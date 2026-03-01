@@ -1,5 +1,6 @@
 # TODO
 
+- Добавить HTML в темы. setTheme() из DevCommit
 - Добавить алиасы в Vite
 
 ## 💎 Новый Layout

@@ -1,9 +1,11 @@
 <template>
   <span>
     <span v-for="(item, i) in items" :key="i">
-      <span v-html="getTag(item)" />
+      <v-code v-if="keys" theme="text">{{ item }}</v-code>
+      <v-code v-else theme="light">{{ item }}</v-code>
+
       <template v-if="i !== items.length - 1">
-        <span v-html="getSymbol()" />
+        <span v-html="getSymbol()"></span>
       </template>
     </span>
   </span>

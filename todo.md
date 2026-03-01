@@ -9,11 +9,8 @@
   - "Поиск" - добавить белый фон
   - Удалить нижние виджеты с навигациям по страницам
 
-## ❤️ UI-компоненты
-  - `v-breadcrumbs.vue` - вынести *.u-code-text* и *.u-code-light* в глобальные классы
-  - Новые компоненты. Добавить реализацию компонентов из docs/.vitepress/components/new-components
-
 ## ✅ TODO
+  - Новые компоненты. Добавить реализацию компонентов из docs/.vitepress/components/new-components
   - Не работает навигация по хешу: "/v-padding.html#v-padding" (актуально для базового layout)
   - Не подставлять *.html* в конце страницы
   - Удалить wiki/dev-commit и wiki/lets-code из путей в методичики

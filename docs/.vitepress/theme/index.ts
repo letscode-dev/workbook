@@ -1,7 +1,7 @@
 import type { Theme } from "vitepress";
 import DefaultTheme from "vitepress/theme";
 import AppConfig from "../../app-config";
-import Layout from "./Layout.vue";
+import Layout from "./components/Layout.vue";
 import VDetails from "../components/v-details.vue";
 import VIframe from "../components/v-iframe.vue";
 import VPadding from "../components/v-padding.vue";

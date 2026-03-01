@@ -1,11 +1,6 @@
 <script setup lang="ts">
 // FIXME: Проверить файл
 
-/**
- * Layout по структуре VuePress app-custom/layouts/Layout.vue:
- * — Десктоп (>960px): vp-theme-container (flex, 100vh), сайдбар слева, vp-content справа (навбар + страница).
- * — Мобильный: базовый layout VitePress (колонка, гамбургер, drawer).
- */
 import { ref, watch, onMounted, onUnmounted, computed } from "vue";
 import { useRoute, useData } from "vitepress";
 import DefaultTheme from "vitepress/theme";
@@ -14,8 +9,9 @@ import VPBackdrop from "vitepress/dist/client/theme-default/components/VPBackdro
 import VPLocalNav from "vitepress/dist/client/theme-default/components/VPLocalNav.vue";
 import VPContent from "vitepress/dist/client/theme-default/components/VPContent.vue";
 import VPFooter from "vitepress/dist/client/theme-default/components/VPFooter.vue";
-import VPNavbar from "./components/VPNavbar.vue";
-import VPSidebar from "./components/VPSidebar.vue";
+
+import VPNavbar from "./VPNavbar.vue";
+import VPSidebar from "./VPSidebar.vue";
 
 const DefaultLayout = DefaultTheme.Layout;
 
@@ -101,56 +97,50 @@ const containerClass = computed(() => [
         <VPNavbar v-if="shouldShowNavbar" />
         <VPLocalNav :open="isSidebarOpen" @open-menu="openSidebar" />
         <VPContent :key="route.path">
-            <template #page-top><slot name="page-top" /></template>
-            <template #page-bottom><slot name="page-bottom" /></template>
-            <template #not-found><slot name="not-found" /></template>
-            <template #home-hero-before
-              ><slot name="home-hero-before"
-            /></template>
-            <template #home-hero-info-before
-              ><slot name="home-hero-info-before"
-            /></template>
-            <template #home-hero-info><slot name="home-hero-info" /></template>
-            <template #home-hero-info-after
-              ><slot name="home-hero-info-after"
-            /></template>
-            <template #home-hero-actions-after
-              ><slot name="home-hero-actions-after"
-            /></template>
-            <template #home-hero-image
-              ><slot name="home-hero-image"
-            /></template>
-            <template #home-hero-after
-              ><slot name="home-hero-after"
-            /></template>
-            <template #home-features-before
-              ><slot name="home-features-before"
-            /></template>
-            <template #home-features-after
-              ><slot name="home-features-after"
-            /></template>
-            <template #doc-footer-before
-              ><slot name="doc-footer-before"
-            /></template>
-            <template #doc-before><slot name="doc-before" /></template>
-            <template #doc-after><slot name="doc-after" /></template>
-            <template #doc-top><slot name="doc-top" /></template>
-            <template #doc-bottom><slot name="doc-bottom" /></template>
-            <template #aside-top><slot name="aside-top" /></template>
-            <template #aside-outline-before
-              ><slot name="aside-outline-before"
-            /></template>
-            <template #aside-outline-after
-              ><slot name="aside-outline-after"
-            /></template>
-            <template #aside-ads-before
-              ><slot name="aside-ads-before"
-            /></template>
-            <template #aside-ads-after
-              ><slot name="aside-ads-after"
-            /></template>
-            <template #aside-bottom><slot name="aside-bottom" /></template>
-          </VPContent>
+          <template #page-top><slot name="page-top" /></template>
+          <template #page-bottom><slot name="page-bottom" /></template>
+          <template #not-found><slot name="not-found" /></template>
+          <template #home-hero-before
+            ><slot name="home-hero-before"
+          /></template>
+          <template #home-hero-info-before
+            ><slot name="home-hero-info-before"
+          /></template>
+          <template #home-hero-info><slot name="home-hero-info" /></template>
+          <template #home-hero-info-after
+            ><slot name="home-hero-info-after"
+          /></template>
+          <template #home-hero-actions-after
+            ><slot name="home-hero-actions-after"
+          /></template>
+          <template #home-hero-image><slot name="home-hero-image" /></template>
+          <template #home-hero-after><slot name="home-hero-after" /></template>
+          <template #home-features-before
+            ><slot name="home-features-before"
+          /></template>
+          <template #home-features-after
+            ><slot name="home-features-after"
+          /></template>
+          <template #doc-footer-before
+            ><slot name="doc-footer-before"
+          /></template>
+          <template #doc-before><slot name="doc-before" /></template>
+          <template #doc-after><slot name="doc-after" /></template>
+          <template #doc-top><slot name="doc-top" /></template>
+          <template #doc-bottom><slot name="doc-bottom" /></template>
+          <template #aside-top><slot name="aside-top" /></template>
+          <template #aside-outline-before
+            ><slot name="aside-outline-before"
+          /></template>
+          <template #aside-outline-after
+            ><slot name="aside-outline-after"
+          /></template>
+          <template #aside-ads-before
+            ><slot name="aside-ads-before"
+          /></template>
+          <template #aside-ads-after><slot name="aside-ads-after" /></template>
+          <template #aside-bottom><slot name="aside-bottom" /></template>
+        </VPContent>
       </div>
       <VPFooter />
     </div>

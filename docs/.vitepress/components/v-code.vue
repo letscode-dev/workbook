@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 interface Props {
-  theme: "text" | "light";
+  theme: "text" | "light" | "important" | "accent" | "flat" | "item" | "commet";
 }
 
 defineProps<Props>();
@@ -14,7 +14,12 @@ defineProps<Props>();
 
 <style scoped>
 .text,
-.light {
+.light,
+.important,
+.accent,
+.flat,
+.item,
+.commet {
   font-family: monospace;
   padding: 0 5px;
   border-radius: 3px;
@@ -32,5 +37,25 @@ defineProps<Props>();
   background-color: rgb(var(--color-white));
   color: rgb(var(--color-orange));
   box-shadow: 0.1px 0.1px 5px 1px rgba(var(--color-black), 0.15);
+}
+.important {
+  background-color: rgba(var(--color-crimson), 0.8);
+  border: 1px solid rgba(var(--color-crimson), 0.9);
+  color: rgb(var(--color-white));
+}
+.accent {
+  background-color: rgba(var(--color-sea-green-dark), 0.7);
+  border: 1px solid rgba(var(--color-sea-green-dark), 0.9);
+  color: rgb(var(--color-white)) !important;
+}
+.flat {
+  color: rgb(var(--color-sea-green-dark));
+}
+.item {
+  background: rgba(var(--color-sea-green-dark), 0.2);
+  color: rgb(var(--color-sea-green-dark));
+}
+.comment {
+  color: rgba(var(--color-gray-70));
 }
 </style>

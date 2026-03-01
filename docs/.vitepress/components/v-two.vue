@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
-    <div class="column" :class="grow ? 'column-grow' : 'column-half'">
+    <div class="column" :class="fix ? 'column-fix' : 'column-half'">
       <slot name="first">User Default1</slot>
     </div>
-    <div class="column" :class="grow ? 'column-fix' : 'column-half'">
+    <div class="column" :class="fix ? 'column-grow' : 'column-half'">
       <slot name="last">User Default2</slot>
     </div>
   </div>
@@ -11,21 +11,28 @@
 
 <script setup lang="ts">
 interface Props {
-  grow?: boolean;
+  fix?: boolean;
 }
 
 withDefaults(defineProps<Props>(), {
-  grow: false,
+  fix: false,
 });
 </script>
 
 <style scoped>
 .wrapper {
+  --border: 1px solid #e1e1e1;
+
   display: flex;
   margin: 10px 0px;
+  border: var(--border);
 }
 .column {
-  margin: 0px 5px;
+  padding: 10px;
+  border-right: var(--border);
+}
+.column:last-child {
+  border-right: none;
 }
 .column-half {
   width: 50%;

@@ -1,5 +1,5 @@
 <template>
-  <span :class="theme">
+  <span :class="['code', theme]">
     <slot></slot>
   </span>
 </template>
@@ -13,13 +13,7 @@ defineProps<Props>();
 </script>
 
 <style scoped>
-.text,
-.light,
-.important,
-.accent,
-.flat,
-.item,
-.commet {
+.code {
   font-family: monospace;
   padding: 0 5px;
   border-radius: 3px;

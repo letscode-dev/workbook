@@ -9,7 +9,8 @@ import VTwo from "../components/v-two.vue";
 import VMarker from "../components/v-marker.vue";
 import VBreadcrumbs from "../components/v-breadcrumbs.vue";
 
-import "./custom.css";
+import "./styles/variables.css";
+import "./styles/custom.css";
 
 export default {
   extends: DefaultTheme,

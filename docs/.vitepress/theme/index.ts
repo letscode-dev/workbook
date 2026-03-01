@@ -10,6 +10,7 @@ import VMarker from "../components/v-marker.vue";
 import VBreadcrumbs from "../components/v-breadcrumbs.vue";
 import VCode from "../components/v-code.vue";
 import VBadge from "../components/v-badge.vue";
+import VDirTree from "../components/v-dir-tree.vue";
 
 import "./styles/variables.css";
 import "./styles/custom.css";
@@ -27,5 +28,6 @@ export default {
     app.component("v-breadcrumbs", VBreadcrumbs);
     app.component("v-code", VCode);
     app.component("v-badge", VBadge);
+    app.component("v-dir-tree", VDirTree);
   },
 } satisfies Theme;

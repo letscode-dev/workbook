@@ -1,8 +1,9 @@
 <template>
   <span>
-    <span v-if="marker === '+'">✅</span>
-    <span v-if="marker === '-'">🅾️</span>
-    <span v-if="marker === '*'">⭐️</span>
+    <span class="icon" v-if="marker === '+'">✅</span>
+    <span class="icon" v-if="marker === '-'">🅾️</span>
+    <span class="icon" v-if="marker === '*'">⭐️</span>
+    <slot></slot>
   </span>
 </template>
 
@@ -16,4 +17,8 @@ interface Props {
 defineProps<Props>();
 </script>
 
-<style scoped></style>
+<style scoped>
+.icon {
+  margin-right: 6px;
+}
+</style>
